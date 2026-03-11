@@ -101,6 +101,22 @@ export default function Testimonials() {
     <div className="pt-20 bg-[#f5f0e8] min-h-screen">
       {/* Header */}
       <section className="bg-[#f5f2ed] pt-24 pb-16 px-6 relative overflow-hidden border-b border-[#ddd6c8]">
+        <div className="absolute left-0 top-0 bottom-0 w-1/5 hidden xl:block opacity-10 pointer-events-none">
+  <img
+    src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop"
+    className="h-full w-full object-cover"
+    alt=""
+    referrerPolicy="no-referrer"
+  />
+</div>
+<div className="absolute right-0 top-0 bottom-0 w-1/5 hidden xl:block opacity-10 pointer-events-none">
+  <img
+    src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop"
+    className="h-full w-full object-cover"
+    alt=""
+    referrerPolicy="no-referrer"
+  />
+</div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
