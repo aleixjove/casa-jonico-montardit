@@ -100,11 +100,12 @@ export default function Footer() {
         <div>
           <div className="text-[9px] font-medium tracking-[0.2em] uppercase text-[#b07d3a] mb-4">{t.footer.legal}</div>
           <ul className="flex flex-col gap-2.5">
-            <li><a href="#" className="text-[11px] font-light text-[#7a9a7a] hover:text-[#a0b4a0] transition-colors">{t.footer.privacidad}</a></li>
-            <li><a href="#" className="text-[11px] font-light text-[#7a9a7a] hover:text-[#a0b4a0] transition-colors">{t.footer.terminos}</a></li>
-            <li><a href="#" className="text-[11px] font-light text-[#7a9a7a] hover:text-[#a0b4a0] transition-colors">{t.footer.reembolso}</a></li>
-            <li><a href="#" className="text-[11px] font-light text-[#7a9a7a] hover:text-[#a0b4a0] transition-colors">{t.footer.accesibilidad}</a></li>
-          </ul>
+  <li><a href="#" className="text-[11px] font-light text-[#7a9a7a] hover:text-[#a0b4a0] transition-colors">{t.footer.privacidad}</a></li>
+  <li><a href="#" className="text-[11px] font-light text-[#7a9a7a] hover:text-[#a0b4a0] transition-colors">{t.footer.terminos}</a></li>
+  <li><a href="#" className="text-[11px] font-light text-[#7a9a7a] hover:text-[#a0b4a0] transition-colors">{t.footer.reembolso}</a></li>
+  <li><a href="#" className="text-[11px] font-light text-[#7a9a7a] hover:text-[#a0b4a0] transition-colors">{t.footer.accesibilidad}</a></li>
+  <li><span className="text-[11px] font-light text-[#7a9a7a]">HUTL-062592</span></li>
+</ul>
         </div>
 
       </div>
