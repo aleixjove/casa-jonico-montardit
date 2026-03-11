@@ -1,0 +1,7 @@
+{
+  "name": "Casa Jonico - Alojamiento Rural",
+  "description": "Alojamiento rural acogedor para 8 personas en Montardit de Dalt, Pallars Sobirà, Pirineo catalán.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
