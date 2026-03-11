@@ -29,7 +29,7 @@ const activityLinks = [
 ];
 
 const activityImages = [
-  'https://static.wixstatic.com/media/fb9e9f_b6e02f3fce2b4b5d87a68858a9090336~mv2.png',
+  'portainehotel.png',
   'https://static.wixstatic.com/media/fb9e9f_1baa9e2f5d854a7e9331e020266c57b5~mv2.jpg',
   'https://static.wixstatic.com/media/fb9e9f_a41d0480f3604e909dd7373d27cfd367~mv2.png',
   'https://static.wixstatic.com/media/fb9e9f_696066c7140e4176857ee7a8c1f5f514~mv2.png',
