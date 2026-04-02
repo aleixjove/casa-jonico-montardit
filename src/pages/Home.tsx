@@ -156,7 +156,7 @@ export default function Home() {
             className="relative"
           >
             <img
-              src="/fora2.png"
+              src="/fora2.jpg"
               alt="Casa Rural Exterior"
               className="rounded-2xl shadow-2xl w-full aspect-[4/5] object-cover"
               referrerPolicy="no-referrer"

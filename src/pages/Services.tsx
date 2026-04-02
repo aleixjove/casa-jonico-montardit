@@ -125,7 +125,7 @@ export default function Services() {
       <section className="max-w-5xl mx-auto px-6 pb-24">
         <div className="relative rounded-3xl overflow-hidden h-[400px] shadow-2xl">
           <img
-            src="/sala.png"
+            src="/salaest1.jpeg"
             alt="Interior acollidor"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"

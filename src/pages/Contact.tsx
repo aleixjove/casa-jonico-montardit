@@ -210,7 +210,7 @@ export default function Contact() {
       {/* Quote */}
       <section className="max-w-4xl mx-auto px-6 pt-4 pb-16 text-center">
         <div className="w-16 h-px bg-[#d0c8b8] mx-auto mb-6" />
-        <h2 className="font-display text-3xl md:text-4xl text-[#2d4a2d] mb-6 italic">{c.quoteTitle}</h2>
+        <h2 className="font-display text-3xl md:text-4xl text-[#2d4a2d] mb-6">{c.quoteTitle}</h2>
         <p className="text-base font-light text-[#5a5a4a] max-w-2xl mx-auto">{c.quoteDesc}</p>
       </section>
 
