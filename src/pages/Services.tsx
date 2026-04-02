@@ -7,6 +7,15 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 const serviceImages: Record<string, string> = {
   bienvenida: 'https://static.wixstatic.com/media/fb9e9f_15f181addf4545a681abae4625f42064~mv2.jpeg',
+  detalle: '/benv1.jpg',
+  ropa: '/toallas.jpg',
+  cocina: '/cafe.jpg',
+  juegos: '/juegos.jpg',
+  calefaccion: '/aire.jpg',
+  chimenea: '/fuego.jpg',
+  barbacoa: '/barbacoa.jpg',
+  lena: '/leña.jpg',
+  parking: '/parking.jpg',
 };
 
 export default function Services() {
