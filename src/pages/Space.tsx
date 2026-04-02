@@ -8,11 +8,11 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 const zonePhotos: Record<string, string[]> = {
   sala: [
-    'https://static.wixstatic.com/media/fb9e9f_8e93fc3daf8249778d3fd4614dc85d66~mv2.png',
+    '/salaest1.jpeg',
     'https://static.wixstatic.com/media/fb9e9f_15cd150a805d4cfc9ac4e633985ef63e~mv2.png',
     'https://static.wixstatic.com/media/fb9e9f_2bcedf5997ad4b8a99a435195ce08551~mv2.png',
     'https://static.wixstatic.com/media/fb9e9f_1e91fc0543a14bae95d39cfb47d623d8~mv2.png',
-    '/salaest1.jpeg',
+    'https://static.wixstatic.com/media/fb9e9f_8e93fc3daf8249778d3fd4614dc85d66~mv2.png',
   ],
   cocina: [
     'https://static.wixstatic.com/media/fb9e9f_1a2d652b85f54d46b42d0c2bcad5ace7~mv2.png',
