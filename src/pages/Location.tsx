@@ -151,25 +151,26 @@ export default function Location() {
             </div>
           </div>
 
-          <div className="relative h-[400px] bg-[#f5f2ed] rounded-sm overflow-hidden border border-[#e0d8c8] group">
+          <div className="relative h-[400px] rounded-sm overflow-hidden border border-[#e0d8c8] group">
+            <img src="/vista1.jpg" alt="Vista de Montardit de Dalt" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div className="absolute inset-0 bg-[#1a2e1a]/60" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center p-8">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <MapPin className="w-8 h-8 text-[#b07d3a] animate-bounce" />
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center shadow-lg mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  <MapPin className="w-8 h-8 text-white animate-bounce" />
                 </div>
-                <p className="font-display text-xl text-[#2d4a2d] mb-2">{l.mapTitle}</p>
-                <p className="text-[#7a7a6a] text-sm font-light mb-8">{l.mapDesc}</p>
+                <p className="font-display text-xl text-white mb-2">{l.mapTitle}</p>
+                <p className="text-white/70 text-sm font-light mb-8">{l.mapDesc}</p>
                 <a
                   href="https://www.google.com/maps/search/Montardit+de+Dalt"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#b07d3a] font-bold uppercase tracking-widest text-[11px] flex items-center justify-center gap-2 hover:underline"
+                  className="text-[#f5c878] font-bold uppercase tracking-widest text-[11px] flex items-center justify-center gap-2 hover:underline"
                 >
                   {l.mapLink} <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
             </div>
-            <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
           </div>
         </div>
       </section>

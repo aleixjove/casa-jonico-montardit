@@ -13,6 +13,10 @@ import Faqs from './pages/Faqs';
 import Testimonials from './pages/Testimonials';
 import Location from './pages/Location';
 import Contact from './pages/Contact';
+import Privacy from './pages/legal/Privacy';
+import Terms from './pages/legal/Terms';
+import Refund from './pages/legal/Refund';
+import Accessibility from './pages/legal/Accessibility';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -43,6 +47,10 @@ export default function App() {
             <Route path="/testimonios" element={<Testimonials />} />
             <Route path="/ubicacion" element={<Location />} />
             <Route path="/contacto" element={<Contact />} />
+            <Route path="/privacidad" element={<Privacy />} />
+            <Route path="/terminos" element={<Terms />} />
+            <Route path="/cancelacion" element={<Refund />} />
+            <Route path="/accesibilitat" element={<Accessibility />} />
           </Routes>
         </main>
         <Footer />

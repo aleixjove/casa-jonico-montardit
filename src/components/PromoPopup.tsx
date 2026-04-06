@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export default function PromoPopup() {
+  const { t } = useLanguage();
+  const p = t.promo;
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -45,16 +48,16 @@ export default function PromoPopup() {
                 <span className="text-6xl md:text-8xl font-display italic text-white leading-none">12%</span>
               </div>
               <h3 className="text-lg md:text-xl font-display text-white mb-8">
-                de descuento reservando directamente
+                {p.title}
               </h3>
 
               {/* Subtitle */}
               <div className="mb-6">
                 <p className="text-[#b07d3a] font-display text-lg md:text-xl mb-1">
-                  Reserva directa · Oferta exclusiva
+                  {p.badge}
                 </p>
                 <p className="text-white/90 font-light text-sm md:text-base">
-                  Reservando en nuestra web directamente
+                  {p.subtitle}
                 </p>
               </div>
 
@@ -64,13 +67,13 @@ export default function PromoPopup() {
                 onClick={closePopup}
                 className="w-full max-w-xs py-4 bg-[#f5f2ed] text-[#2d4a2d] rounded-full font-sans font-medium text-sm tracking-widest uppercase flex items-center justify-center gap-2 hover:bg-white transition-all mb-8 group"
               >
-                Reservar con descuento
+                {p.cta}
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
 
               {/* Footer text */}
               <p className="text-white/70 text-[11px] md:text-xs font-light tracking-wider uppercase">
-                Sin intermediarios · Confirmación en menos de 24h
+                {p.footer}
               </p>
             </div>
 

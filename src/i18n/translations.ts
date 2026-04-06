@@ -302,6 +302,13 @@ export const translations = {
         { q: '¿Por qué es mejor reservar directamente?', a: 'Obtienes un <strong>12% de descuento</strong> respecto a Booking o Airbnb, trato directo y confirmación en menos de 24 horas.' },
       ],
     },
+    promo: {
+      title: 'de descuento reservando directamente',
+      badge: 'Reserva directa · Oferta exclusiva',
+      subtitle: 'Reservando en nuestra web directamente',
+      cta: 'Reservar con descuento',
+      footer: 'Sin intermediarios · Confirmación en menos de 24h',
+    },
   },
 
   ca: {
@@ -605,6 +612,13 @@ export const translations = {
         { q: 'Per què és millor reservar directament?', a: "Obtens un <strong>12% de descompte</strong> respecte a Booking o Airbnb, tracte directe i confirmació en menys de 24 hores." },
       ],
     },
+    promo: {
+      title: 'de descompte reservant directament',
+      badge: 'Reserva directa · Oferta exclusiva',
+      subtitle: 'Reservant a la nostra web directament',
+      cta: 'Reservar amb descompte',
+      footer: 'Sense intermediaris · Confirmació en menys de 24h',
+    },
   },
 
   en: {
@@ -907,6 +921,13 @@ export const translations = {
         { q: 'Is parking available?', a: 'Yes, <strong>free private parking</strong> 200 m from the house.' },
         { q: 'Why is it better to book directly?', a: 'You get a <strong>12% discount</strong> vs Booking or Airbnb, plus direct owner contact.' },
       ],
+    },
+    promo: {
+      title: 'discount booking directly with us',
+      badge: 'Direct booking · Exclusive offer',
+      subtitle: 'By booking on our website directly',
+      cta: 'Book with discount',
+      footer: 'No middlemen · Confirmation within 24h',
     },
   },
 };
