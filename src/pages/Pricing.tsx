@@ -1,17 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight, CheckCircle2, Loader2, Send, AlertCircle } from 'lucide-react';
 import ScrollToTop from '../components/ScrollToTop';
 import { useLanguage } from '../i18n/LanguageContext';
 
 const FORMSPREE_ID = 'xaqdkzdn';
-
-const occupiedDates = [
-  '2026-02-13', '2026-02-14', '2026-02-15',
-  '2026-02-27', '2026-02-28',
-  '2026-03-06', '2026-03-07', '2026-03-08',
-  '2026-04-30', '2026-05-01', '2026-05-02', '2026-05-03',
-];
 
 const seasons = [
   { name: 'alta', months: [6, 7], price: 285, minNights: 3 },
@@ -29,7 +22,15 @@ export default function Pricing() {
   const { t } = useLanguage();
   const p = t.pricing;
 
+  const [occupiedDates, setOccupiedDates] = useState<string[]>([]);
   const [currentDate, setCurrentDate] = useState(new Date());
+
+  useEffect(() => {
+    fetch('/.netlify/functions/ical')
+      .then(r => r.json())
+      .then(data => { if (data.blockedDates) setOccupiedDates(data.blockedDates); })
+      .catch(() => {}); // si falla, el calendari queda sense dates bloquejades
+  }, []);
   const [selectStart, setSelectStart] = useState<string | null>(null);
   const [selectEnd, setSelectEnd] = useState<string | null>(null);
   const [awaitingEnd, setAwaitingEnd] = useState(false);
