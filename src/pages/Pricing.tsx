@@ -9,7 +9,7 @@ const FORMSPREE_ID = 'xaqdkzdn';
 const seasons = [
   { name: 'alta', months: [6, 7], price: 285, minNights: 3 },
   { name: 'media', months: [5, 8], price: 235, minNights: 2 },
-  { name: 'baja', months: null, price: 185, minNights: 2 },
+  { name: 'baja', months: null, price: 210, minNights: 2 },
 ];
 
 const specialHighDates = [

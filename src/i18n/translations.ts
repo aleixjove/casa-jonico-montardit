@@ -97,7 +97,7 @@ export const translations = {
       seasonRows: [
         { label: 'Alta', period: 'Jul · Ago · Semana Santa · Navidad', price: '285 €', badge: 'bg-[#fdebd5] text-[#b07d3a]', border: 'border-[#b07d3a]' },
         { label: 'Media', period: 'Jun · Sep · Puentes y festivos', price: '235 €', badge: 'bg-[#e8f0e8] text-[#2d4a2d]', border: 'border-[#2d4a2d]' },
-        { label: 'Baja', period: 'Oct – May (resto)', price: '185 €', badge: 'bg-[#f0f0ee] text-[#7a7a6a]', border: 'border-[#9a9a8a]' },
+        { label: 'Baja', period: 'Oct – May (resto)', price: '210 €', badge: 'bg-[#f0f0ee] text-[#7a7a6a]', border: 'border-[#9a9a8a]' },
       ],
       calInstruccion: 'Haz clic en el día de entrada, después en el día de salida',
       calInstruccionEnd: '↑ Ahora selecciona el día de salida',
@@ -407,7 +407,7 @@ export const translations = {
       seasonRows: [
         { label: 'Alta', period: 'Jul · Ago · Setmana Santa · Nadal', price: '285 €', badge: 'bg-[#fdebd5] text-[#b07d3a]', border: 'border-[#b07d3a]' },
         { label: 'Mitjana', period: 'Jun · Set · Ponts i festius', price: '235 €', badge: 'bg-[#e8f0e8] text-[#2d4a2d]', border: 'border-[#2d4a2d]' },
-        { label: 'Baixa', period: 'Oct – Mai (resta)', price: '185 €', badge: 'bg-[#f0f0ee] text-[#7a7a6a]', border: 'border-[#9a9a8a]' },
+        { label: 'Baixa', period: 'Oct – Mai (resta)', price: '210 €', badge: 'bg-[#f0f0ee] text-[#7a7a6a]', border: 'border-[#9a9a8a]' },
       ],
       calInstruccion: "Fes clic al dia d'entrada, després al dia de sortida",
       calInstruccionEnd: '↑ Ara selecciona el dia de sortida',
@@ -717,7 +717,7 @@ export const translations = {
       seasonRows: [
         { label: 'High', period: 'Jul · Aug · Easter · Christmas', price: '€285', badge: 'bg-[#fdebd5] text-[#b07d3a]', border: 'border-[#b07d3a]' },
         { label: 'Mid', period: 'Jun · Sep · Bank holidays', price: '€235', badge: 'bg-[#e8f0e8] text-[#2d4a2d]', border: 'border-[#2d4a2d]' },
-        { label: 'Low', period: 'Oct – May (other)', price: '€185', badge: 'bg-[#f0f0ee] text-[#7a7a6a]', border: 'border-[#9a9a8a]' },
+        { label: 'Low', period: 'Oct – May (other)', price: '€210', badge: 'bg-[#f0f0ee] text-[#7a7a6a]', border: 'border-[#9a9a8a]' },
       ],
       calInstruccion: 'Click the check-in day, then the check-out day',
       calInstruccionEnd: '↑ Now select the check-out day',
