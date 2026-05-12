@@ -10,11 +10,19 @@ export default function PromoPopup() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const isGoogleAds =
+      params.get('utm_source') === 'google' ||
+      params.get('utm_medium') === 'cpc';
+    const isNoPopup = params.get('nopopup') === '1';
+
+    if (isGoogleAds || isNoPopup) return;
+
     const hasSeenPopup = localStorage.getItem('hasSeenPromoPopup');
     if (!hasSeenPopup) {
       const timer = setTimeout(() => {
         setIsVisible(true);
-      }, 2000); // Show after 2 seconds
+      }, 2000);
       return () => clearTimeout(timer);
     }
   }, []);
