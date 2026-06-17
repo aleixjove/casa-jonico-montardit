@@ -7,7 +7,8 @@ import { useLanguage } from '../i18n/LanguageContext';
 const FORMSPREE_ID = 'xaqdkzdn';
 
 const seasons = [
-  { name: 'alta', months: [6, 7], price: 285, minNights: 3 },
+  { name: 'alta', months: [6], price: 275, minNights: 3 },
+  { name: 'alta', months: [7], price: 275, minNights: 4 },
   { name: 'media', months: [5, 8], price: 235, minNights: 2 },
   { name: 'baja', months: null, price: 210, minNights: 2 },
 ];
@@ -216,12 +217,21 @@ export default function Pricing() {
       );
     }
 
+    const monthSeasonName = [6, 7].includes(month) ? 'alta' : [5, 8].includes(month) ? 'media' : 'baja';
+    const monthSeasonIdx = monthSeasonName === 'alta' ? 0 : monthSeasonName === 'media' ? 1 : 2;
+    const monthSeasonRow = p.seasonRows[monthSeasonIdx];
+
     return (
       <div className="bg-white border border-[#e0d8c8] rounded-sm p-8 shadow-xl">
         <div className="flex items-center justify-between mb-8">
-          <h3 className="font-display text-xl text-black capitalize">
-            {p.calMonths[month]} {year}
-          </h3>
+          <div className="flex flex-col gap-2">
+            <h3 className="font-display text-xl text-black capitalize">
+              {p.calMonths[month]} {year}
+            </h3>
+            <span className={`text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded-full w-fit ${monthSeasonRow.badge}`}>
+              {monthSeasonRow.label}
+            </span>
+          </div>
           <div className="flex gap-2">
             <button onClick={() => changeMonth(-1)} className="w-8 h-8 border border-[#d0c8b8] rounded-sm flex items-center justify-center text-[#2d4a2d] hover:bg-[#2d4a2d] hover:text-white transition-all">
               <ChevronLeft className="w-4 h-4" />
