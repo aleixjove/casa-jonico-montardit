@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight, CheckCircle2, Loader2, Send, AlertCircle } from 'lucide-react';
 import ScrollToTop from '../components/ScrollToTop';
+import SmoobuWidget from '../components/SmoobuWidget';
 import { useLanguage } from '../i18n/LanguageContext';
 
 const FORMSPREE_ID = 'xaqdkzdn';
@@ -22,6 +23,7 @@ export default function Pricing() {
   const { t } = useLanguage();
   const p = t.pricing;
 
+  const [bookingTab, setBookingTab] = useState<'instant' | 'request'>('instant');
   const [occupiedDates, setOccupiedDates] = useState<string[]>([]);
   const [currentDate, setCurrentDate] = useState(new Date());
 
@@ -425,7 +427,44 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* Booking Layout */}
+      {/* Booking Tabs */}
+      <section className="max-w-6xl mx-auto px-6 pb-6">
+        <div className="flex flex-col sm:flex-row justify-center gap-2 mb-3">
+          <button
+            onClick={() => setBookingTab('instant')}
+            className={`px-6 py-3 text-[11px] font-bold tracking-widest uppercase rounded-sm transition-all ${
+              bookingTab === 'instant'
+                ? 'bg-[#2d4a2d] text-white shadow-md'
+                : 'bg-white border border-[#d0c8b8] text-[#7a7a6a] hover:bg-[#faf8f4]'
+            }`}
+          >
+            {p.tabInstant}
+          </button>
+          <button
+            onClick={() => setBookingTab('request')}
+            className={`px-6 py-3 text-[11px] font-bold tracking-widest uppercase rounded-sm transition-all ${
+              bookingTab === 'request'
+                ? 'bg-[#2d4a2d] text-white shadow-md'
+                : 'bg-white border border-[#d0c8b8] text-[#7a7a6a] hover:bg-[#faf8f4]'
+            }`}
+          >
+            {p.tabRequest}
+          </button>
+        </div>
+        <p className="text-center text-[12px] text-[#7a7a6a] font-light italic">
+          {bookingTab === 'instant' ? p.tabInstantDesc : p.tabRequestDesc}
+        </p>
+      </section>
+
+      {/* Instant booking — Smoobu Widget */}
+      {bookingTab === 'instant' && (
+        <section className="max-w-4xl mx-auto px-6 pb-24">
+          <SmoobuWidget />
+        </section>
+      )}
+
+      {/* Request booking — original calendar + form */}
+      {bookingTab === 'request' && (
       <section className="max-w-6xl mx-auto px-6 pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
 
@@ -511,6 +550,7 @@ export default function Pricing() {
           </div>
         </div>
       </section>
+      )}
 
       {/* Quote */}
       <section className="max-w-4xl mx-auto px-6 pt-4 pb-16 text-center">

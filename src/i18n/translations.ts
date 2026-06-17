@@ -148,6 +148,10 @@ export const translations = {
       totalSuf: '€ (con descuento 12% reserva directa)',
       quoteTitle: '"El refugio perfecto te espera en el Pallars"',
       quoteDesc: 'Reserva hoy y asegúrate el mejor precio garantizado. Estamos deseando darte la bienvenida a Casa Jonico.',
+      tabInstant: 'Reserva instantánea',
+      tabInstantDesc: 'Reserva y paga online ahora — confirmación inmediata',
+      tabRequest: 'Solicitar con descuento',
+      tabRequestDesc: 'Te confirmamos personalmente en menos de 24h con un 12% de descuento',
     },
     services: {
       title: 'Servicios pensados para',
@@ -458,6 +462,10 @@ export const translations = {
       totalSuf: "€ (amb descompte 12% reserva directa)",
       quoteTitle: '"El refugi perfecte t\'espera al Pallars"',
       quoteDesc: "Reserva avui i assegura't el millor preu garantit. Estem desitjant donar-te la benvinguda a Casa Jonico.",
+      tabInstant: 'Reserva instantània',
+      tabInstantDesc: 'Reserva i paga en línia ara — confirmació immediata',
+      tabRequest: 'Sol·licitar amb descompte',
+      tabRequestDesc: 'Et confirmem personalment en menys de 24h amb un 12% de descompte',
     },
     services: {
       title: 'Serveis pensats per a',
@@ -768,6 +776,10 @@ export const translations = {
       totalSuf: '€ (with 12% direct booking discount)',
       quoteTitle: '"The perfect retreat awaits you in the Pallars"',
       quoteDesc: 'Book today and secure the best guaranteed price. We look forward to welcoming you to Casa Jonico.',
+      tabInstant: 'Instant booking',
+      tabInstantDesc: 'Book and pay online now — instant confirmation',
+      tabRequest: 'Request with discount',
+      tabRequestDesc: 'We confirm personally within 24h with a 12% discount',
     },
     services: {
       title: 'Services designed for',

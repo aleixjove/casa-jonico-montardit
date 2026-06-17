@@ -34,12 +34,12 @@ function parseICalDates(text) {
 }
 
 export const handler = async () => {
-  const icalUrl = process.env.AIRBNB_ICAL_URL;
+  const icalUrl = process.env.SMOOBU_ICAL_URL || process.env.AIRBNB_ICAL_URL;
 
   if (!icalUrl) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'AIRBNB_ICAL_URL not configured' }),
+      body: JSON.stringify({ error: 'SMOOBU_ICAL_URL not configured' }),
     };
   }
 
