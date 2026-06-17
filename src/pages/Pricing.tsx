@@ -186,7 +186,6 @@ export default function Pricing() {
       const dateObj = new Date(year, month, d);
       const isPast = dateObj < today;
       const isOccupied = occupiedDates.includes(dateStr);
-      const season = getSeasonForDate(dateStr);
 
       let cls = 'aspect-square flex items-center justify-center text-sm font-light rounded-sm transition-all relative cursor-pointer ';
       if (isPast) {
@@ -194,9 +193,7 @@ export default function Pricing() {
       } else if (isOccupied) {
         cls += 'bg-[#f0e8e0] text-[#c4a882] cursor-not-allowed line-through ';
       } else {
-        if (season.name === 'alta') cls += 'text-[#b07d3a] ';
-        if (season.name === 'media') cls += 'text-[#2d4a2d] ';
-        cls += 'hover:bg-[#eee8dc] ';
+        cls += 'bg-[#5d8f5d] text-white font-medium hover:bg-[#4a7a4a] shadow-sm ';
       }
 
       const isStart = dateStr === selectStart;
