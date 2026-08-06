@@ -161,6 +161,7 @@ export default function Home() {
               alt="Exterior de Casa Jonico, casa rural de pedra a Montardit de Dalt (Pallars Sobirà)"
               className="rounded-2xl shadow-2xl w-full aspect-[4/5] object-cover"
               loading="lazy"
+              fetchPriority="low"
               referrerPolicy="no-referrer"
             />
             <div className="absolute -bottom-10 -left-10 bg-primary p-8 rounded-2xl hidden md:block">
