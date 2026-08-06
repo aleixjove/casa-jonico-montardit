@@ -81,7 +81,7 @@ export default function Services() {
                       {serviceImages[service.id] ? (
                         <img
                           src={serviceImages[service.id]}
-                          alt={service.title}
+                          alt={('imgAlt' in service && service.imgAlt) || service.title}
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           loading="lazy"
                           referrerPolicy="no-referrer"

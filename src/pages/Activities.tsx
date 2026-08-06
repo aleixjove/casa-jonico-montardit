@@ -107,7 +107,7 @@ export default function Activities() {
             <div className="rounded-lg overflow-hidden shadow-xl mb-8">
               <img
                 src={activityImages[idx]}
-                alt={activity.title}
+                alt={('imgAlt' in activity && activity.imgAlt) || activity.title}
                 className="w-full h-auto object-cover"
                 loading="lazy"
                 referrerPolicy="no-referrer"

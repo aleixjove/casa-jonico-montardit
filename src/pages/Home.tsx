@@ -85,7 +85,7 @@ export default function Home() {
               <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-serif mb-4">{h.h1Title}</h3>
+              <h2 className="text-2xl font-serif mb-4">{h.h1Title}</h2>
               <p className="text-primary/60">{h.h1Desc}</p>
             </motion.div>
             <motion.div
@@ -98,7 +98,7 @@ export default function Home() {
               <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
                 <Star className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-serif mb-4">{h.h2Title}</h3>
+              <h2 className="text-2xl font-serif mb-4">{h.h2Title}</h2>
               <p className="text-primary/60">{h.h2Desc}</p>
             </motion.div>
             <motion.div
@@ -111,7 +111,7 @@ export default function Home() {
               <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
                 <ShieldCheck className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-serif mb-4">{h.h3Title}</h3>
+              <h2 className="text-2xl font-serif mb-4">{h.h3Title}</h2>
               <p className="text-primary/60">{h.h3Desc}</p>
             </motion.div>
           </div>

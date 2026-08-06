@@ -30,7 +30,7 @@ export default function Footer() {
               href="https://www.instagram.com/casajonico" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-[34px] h-[34px] border border-secondary/20 rounded-full flex items-center justify-center text-[#a0b4a0] transition-all hover:border-[#b07d3a] hover:text-secondary hover:bg-[#b07d3a]/15"
+              className="w-[34px] h-[34px] border border-secondary/20 rounded-full flex items-center justify-center text-[#a0b4a0] transition-all hover:border-[#cd9a55] hover:text-secondary hover:bg-[#cd9a55]/15"
               title="Instagram"
             >
               <Instagram size={15} strokeWidth={1.5} />
@@ -39,7 +39,7 @@ export default function Footer() {
               href="https://wa.me/34607830381" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-[34px] h-[34px] border border-secondary/20 rounded-full flex items-center justify-center text-[#a0b4a0] transition-all hover:border-[#b07d3a] hover:text-secondary hover:bg-[#b07d3a]/15"
+              className="w-[34px] h-[34px] border border-secondary/20 rounded-full flex items-center justify-center text-[#a0b4a0] transition-all hover:border-[#cd9a55] hover:text-secondary hover:bg-[#cd9a55]/15"
               title="WhatsApp"
             >
               <MessageCircle size={15} strokeWidth={1.5} />
@@ -49,20 +49,20 @@ export default function Footer() {
 
         {/* Contact Column */}
         <div>
-          <div className="text-[9px] font-medium tracking-[0.2em] uppercase text-[#b07d3a] mb-4">{t.footer.contacto}</div>
+          <div className="text-[9px] font-medium tracking-[0.2em] uppercase text-[#cd9a55] mb-4">{t.footer.contacto}</div>
           <div className="flex flex-col mb-3">
-            <span className="text-[10px] font-medium tracking-[0.12em] uppercase text-[#6a8a6a] mb-0.5">{t.footer.telefono}</span>
+            <span className="text-[10px] font-medium tracking-[0.12em] uppercase text-[#88ac88] mb-0.5">{t.footer.telefono}</span>
             <span className="text-sm font-light text-[#e0dcd4]">
               <a href="tel:+34607830381" className="hover:text-secondary transition-colors">+34 607 83 03 81</a>
             </span>
           </div>
           <div className="flex flex-col mb-3">
-            <span className="text-[10px] font-medium tracking-[0.12em] uppercase text-[#6a8a6a] mb-0.5">{t.footer.email}</span>
+            <span className="text-[10px] font-medium tracking-[0.12em] uppercase text-[#88ac88] mb-0.5">{t.footer.email}</span>
             <span className="text-sm font-light text-[#e0dcd4]">
               <a href="mailto:reserves@casajonico.com" className="hover:text-secondary transition-colors">reserves@casajonico.com</a>
             </span>
           </div>
-          <div className="mt-3.5 pt-3.5 border-t border-secondary/10 text-xs font-light text-[#7a9a7a] leading-relaxed italic">
+          <div className="mt-3.5 pt-3.5 border-t border-secondary/10 text-xs font-light text-[#8fb08f] leading-relaxed italic">
             Montardit de Dalt<br />
             Pallars Sobirà · Lleida, 25568
           </div>
@@ -70,7 +70,7 @@ export default function Footer() {
 
         {/* Explore Column */}
         <div>
-          <div className="text-[9px] font-medium tracking-[0.2em] uppercase text-[#b07d3a] mb-4">{t.footer.explorar}</div>
+          <div className="text-[9px] font-medium tracking-[0.2em] uppercase text-[#cd9a55] mb-4">{t.footer.explorar}</div>
           <ul className="flex flex-col gap-2.5">
             {[
               { name: t.nav.inicio, path: '/' },
@@ -87,7 +87,7 @@ export default function Footer() {
                   to={link.path} 
                   className="group text-xs font-light text-[#a0b4a0] flex items-center gap-2 transition-colors hover:text-secondary"
                 >
-                  <span className="w-3.5 h-[1px] bg-[#b07d3a] opacity-50 transition-all group-hover:opacity-100 group-hover:w-5" />
+                  <span className="w-3.5 h-[1px] bg-[#cd9a55] opacity-50 transition-all group-hover:opacity-100 group-hover:w-5" />
                   {link.name}
                 </Link>
               </li>
@@ -97,13 +97,13 @@ export default function Footer() {
 
         {/* Legal Column */}
         <div>
-          <div className="text-[9px] font-medium tracking-[0.2em] uppercase text-[#b07d3a] mb-4">{t.footer.legal}</div>
+          <div className="text-[9px] font-medium tracking-[0.2em] uppercase text-[#cd9a55] mb-4">{t.footer.legal}</div>
           <ul className="flex flex-col gap-2.5">
-  <li><Link to="/privacidad" className="text-[11px] font-light text-[#7a9a7a] hover:text-[#a0b4a0] transition-colors">{t.footer.privacidad}</Link></li>
-  <li><Link to="/terminos" className="text-[11px] font-light text-[#7a9a7a] hover:text-[#a0b4a0] transition-colors">{t.footer.terminos}</Link></li>
-  <li><Link to="/cancelacion" className="text-[11px] font-light text-[#7a9a7a] hover:text-[#a0b4a0] transition-colors">{t.footer.reembolso}</Link></li>
-  <li><Link to="/accesibilitat" className="text-[11px] font-light text-[#7a9a7a] hover:text-[#a0b4a0] transition-colors">{t.footer.accesibilidad}</Link></li>
-  <li><span className="text-[11px] font-light text-[#7a9a7a]">HUTL-062592</span></li>
+  <li><Link to="/privacidad" className="text-[11px] font-light text-[#8fb08f] hover:text-[#a0b4a0] transition-colors">{t.footer.privacidad}</Link></li>
+  <li><Link to="/terminos" className="text-[11px] font-light text-[#8fb08f] hover:text-[#a0b4a0] transition-colors">{t.footer.terminos}</Link></li>
+  <li><Link to="/cancelacion" className="text-[11px] font-light text-[#8fb08f] hover:text-[#a0b4a0] transition-colors">{t.footer.reembolso}</Link></li>
+  <li><Link to="/accesibilitat" className="text-[11px] font-light text-[#8fb08f] hover:text-[#a0b4a0] transition-colors">{t.footer.accesibilidad}</Link></li>
+  <li><span className="text-[11px] font-light text-[#8fb08f]">HUTL-062592</span></li>
 </ul>
         </div>
 
@@ -111,11 +111,11 @@ export default function Footer() {
 
       <div className="border-t border-secondary/10 px-6 py-4">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="text-[11px] font-light text-[#5a7a5a] tracking-wider text-center sm:text-left">
+          <span className="text-[11px] font-light text-[#94aa94] tracking-wider text-center sm:text-left">
             © {new Date().getFullYear()} Casa Jonico de Montardit. {t.footer.derechos}
           </span>
-          <span className="flex items-center gap-2 text-[11px] font-light text-[#5a7a5a]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#b07d3a] opacity-60" />
+          <span className="flex items-center gap-2 text-[11px] font-light text-[#94aa94]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#cd9a55] opacity-60" />
             {t.footer.reservaDirecta}
           </span>
         </div>

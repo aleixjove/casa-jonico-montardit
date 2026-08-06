@@ -160,7 +160,7 @@ export const translations = {
         { id: 'bienvenida', title: 'Bienvenida y acompañamiento', tag: 'Servicio incluido', desc: 'Te recibiremos personalmente a tu llegada para enseñarte la casa y resolver cualquier duda. Estamos disponibles durante toda la estancia para cualquier necesidad.' },
         { id: 'detalle', title: 'Detalle de bienvenida', tag: 'Servicio incluido', desc: 'Al llegar encontrarás un pequeño obsequio de productos locales del Pallars Sobirà para empezar la estancia con buen sabor de boca.' },
         { id: 'ropa', title: 'Ropa de cama y toallas', tag: 'Servicio incluido', desc: 'Todas las camas vienen equipadas con sábanas y mantas. Cada huésped dispone de su juego de toallas de baño, limpio y preparado para tu llegada.' },
-        { id: 'cocina', title: 'Cocina totalmente equipada', tag: 'Servicio incluido', desc: 'Horno, placa de cocción, microondas, campana extractora, nevera, cafetera Nespresso y utensilios completos para cocinar con comodidad durante toda la estancia.' },
+        { id: 'cocina', title: 'Cocina totalmente equipada', tag: 'Servicio incluido', desc: 'Horno, placa de cocción, microondas, campana extractora, nevera, cafetera Nespresso y utensilios completos para cocinar con comodidad durante toda la estancia.', imgAlt: 'Cafetera Nespresso y cocina totalmente equipada en Casa Jonico' },
         { id: 'juegos', title: 'Juegos de mesa', tag: 'Servicio incluido', desc: 'Selección de juegos para disfrutar en familia: cartas, parchís, ajedrez y más. Perfectos para las tardes de lluvia o las noches alrededor de la chimenea.' },
         { id: 'calefaccion', title: 'Calefacción y aire acondicionado', tag: 'Servicio incluido', desc: 'Calefacción central para los meses fríos y aire acondicionado para el verano. Confort garantizado en cualquier época del año.' },
         { id: 'chimenea', title: 'Chimenea', tag: 'Servicio incluido', desc: 'La sala de estar cuenta con una chimenea de leña que crea una atmósfera única en las noches de montaña. La leña está incluida y siempre disponible.' },
@@ -184,12 +184,12 @@ export const translations = {
       zones: {
         sala: { title: 'Sala de estar', tag: 'Planta principal', desc: 'Un espacio amplio y luminoso, diseñado para el descanso y la convivencia. Los techos altos de madera, la chimenea y los grandes ventanales crean un ambiente cálido y acogedor durante todo el año, con unas preciosas vistas del pueblo.', features: ['Chimenea', 'Techos de madera', 'Vistas al pueblo', 'TV'] },
         cocina: { title: 'Cocina', tag: 'Planta principal', desc: 'Totalmente equipada y pensada para que te sientas como en casa. Combina funcionalidad y estilo rústico, con mobiliario de madera clara, encimeras amplias y una cuidada iluminación natural.', features: ['Horno', 'Microondas', 'Nevera', 'Cafetera Nespresso'] },
-        galfer: { title: 'Habitación Gall Fer', tag: 'Habitación · Planta 1', desc: 'Amplia y luminosa, esta habitación invita al descanso desde el primer momento. Decorada en tonos suaves y materiales naturales, combina sencillez, calidez y confort en un ambiente acogedor y relajante.', features: ['Cama doble', 'Balcón', 'Vistas al valle'] },
-        cabirol: { title: 'Habitación Cabirol', tag: 'Habitación · Planta 1', desc: 'Habitación compartida amplia y funcional, ideal para familias o grupos. Diseñada para ofrecer comodidad y descanso, cuenta con literas de madera en tonos claros y una distribución práctica que aprovecha al máximo el espacio.', features: ['Literas', 'Luz natural', 'Ideal familias'] },
-        isard: { title: 'Habitación Isard', tag: 'Habitación · Planta 2', desc: 'Habitación con carácter y vistas privilegiadas, situada en la planta superior. Dispone de cama doble y acceso al balcón, que aporta una agradable sensación de amplitud y conexión con el exterior.', features: ['Cama doble', 'Balcón', 'Planta superior'] },
+        galfer: { title: 'Habitación Gall Fer', tag: 'Habitación · Planta 1', desc: 'Amplia y luminosa, esta habitación invita al descanso desde el primer momento. Decorada en tonos suaves y materiales naturales, combina sencillez, calidez y confort en un ambiente acogedor y relajante.', features: ['Cama doble', 'Balcón', 'Vistas al valle'], imgAlt: 'Habitación Gall Fer con cama doble y balcón con vistas al valle' },
+        cabirol: { title: 'Habitación Cabirol', tag: 'Habitación · Planta 1', desc: 'Habitación compartida amplia y funcional, ideal para familias o grupos. Diseñada para ofrecer comodidad y descanso, cuenta con literas de madera en tonos claros y una distribución práctica que aprovecha al máximo el espacio.', features: ['Literas', 'Luz natural', 'Ideal familias'], imgAlt: 'Habitación Cabirol con literas de madera, ideal para familias o grupos' },
+        isard: { title: 'Habitación Isard', tag: 'Habitación · Planta 2', desc: 'Habitación con carácter y vistas privilegiadas, situada en la planta superior. Dispone de cama doble y acceso al balcón, que aporta una agradable sensación de amplitud y conexión con el exterior.', features: ['Cama doble', 'Balcón', 'Planta superior'], imgAlt: 'Habitación Isard con cama doble y balcón en la planta superior' },
         banys: { title: 'Baños', tag: '3 baños completos', desc: 'Tres baños completos y funcionales, diseñados para ofrecer comodidad y bienestar durante la estancia. Combinan materiales cálidos como la madera con acabados claros que aportan sensación de amplitud y limpieza.', features: ['Ducha amplia', 'Bañera', 'Secador', 'Toallas incluidas'] },
         bodega: { title: 'Bodega y barbacoa', tag: 'Planta baja', desc: 'Un espacio con carácter rústico, donde la piedra y la madera toman el protagonismo. Pensado como zona de apoyo y encuentro, combina tradición y funcionalidad en un ambiente auténtico y acogedor.', features: ['Barbacoa', 'Leña incluida', 'Piedra original'] },
-        patio: { title: 'El espacio de todos', tag: 'Exterior', desc: 'Espacio exterior común pensado para disfrutar con calma del entorno y compartir momentos especiales. Un patio de piedra tradicional, amplio y luminoso, que conserva el carácter auténtico de la casa.', features: ['Patio de piedra', 'Zona exterior', 'Aparcamiento'] },
+        patio: { title: 'El espacio de todos', tag: 'Exterior', desc: 'Espacio exterior común pensado para disfrutar con calma del entorno y compartir momentos especiales. Un patio de piedra tradicional, amplio y luminoso, que conserva el carácter auténtico de la casa.', features: ['Patio de piedra', 'Zona exterior', 'Aparcamiento'], imgAlt: 'Patio exterior de piedra tradicional de Casa Jonico' },
       },
     },
     testimonials: {
@@ -221,7 +221,7 @@ export const translations = {
       ctaDesc: 'Estaremos encantados de ayudarte a planificar tus actividades durante tu estancia.',
       ctaButton: 'Contactar ahora →',
       items: [
-        { tag: 'Invierno', title: 'Esquí', desc: "El Pirineo catalán es uno de los destinos de esquí más completos de la Península Ibérica.", subTitle: 'Estaciones cercanas', items: [
+        { tag: 'Invierno', title: 'Esquí', imgAlt: 'Esquí en el Pirineo — estación de Portainé a 29 km de Casa Jonico', desc: "El Pirineo catalán es uno de los destinos de esquí más completos de la Península Ibérica.", subTitle: 'Estaciones cercanas', items: [
           { name: 'Portainé', detail: '29,3 km · 45 min. Estación familiar con pistas para todos los niveles.' },
           { name: 'Espot Esquí', detail: "18 km · 25 min. Estación del Pallars Sobirà integrada en el entorno del Parc Nacional d'Aigüestortes." },
           { name: 'Baqueira-Beret', detail: '51,5 km · 53 min. Una de las estaciones más grandes y prestigiosas de España, con más de 160 km de pistas.' },
@@ -470,7 +470,7 @@ export const translations = {
         { id: 'bienvenida', title: 'Benvinguda i acompanyament', tag: 'Servei inclòs', desc: "T'acollirem personalment a la teva arribada per ensenyar-te la casa i resoldre qualsevol dubte." },
         { id: 'detalle', title: 'Detall de benvinguda', tag: 'Servei inclòs', desc: "En arribar trobaràs un petit obsequi de productes locals del Pallars Sobirà." },
         { id: 'ropa', title: 'Roba de llit i tovalloles', tag: 'Servei inclòs', desc: "Tots els llits vénen equipats amb llençols i mantes. Cada hoste disposa del seu joc de tovalloles de bany." },
-        { id: 'cocina', title: 'Cuina totalment equipada', tag: 'Servei inclòs', desc: "Forn, placa de cocció, microones, campana extractora, nevera, cafetera Nespresso i estris complets." },
+        { id: 'cocina', title: 'Cuina totalment equipada', tag: 'Servei inclòs', desc: "Forn, placa de cocció, microones, campana extractora, nevera, cafetera Nespresso i estris complets.", imgAlt: 'Cafetera Nespresso i cuina totalment equipada a Casa Jonico' },
         { id: 'juegos', title: 'Jocs de taula', tag: 'Servei inclòs', desc: 'Selecció de jocs per gaudir en família: cartes, parxís, escacs i més.' },
         { id: 'calefaccion', title: 'Calefacció i aire condicionat', tag: 'Servei inclòs', desc: "Calefacció central per als mesos freds i aire condicionat per a l'estiu." },
         { id: 'chimenea', title: 'Llar de foc', tag: 'Servei inclòs', desc: "El saló compta amb una llar de foc de llenya que crea una atmosfera única en les nits de muntanya. La llenya està inclosa." },
@@ -494,12 +494,12 @@ export const translations = {
       zones: {
         sala: { title: "Sala d'estar", tag: 'Planta principal', desc: "Un espai ampli i lluminós, dissenyat per al descans i la convivència. Els sostres alts de fusta, la llar de foc i els grans finestrals creen un ambient càlid i acollidor.", features: ['Llar de foc', 'Sostres de fusta', 'Vistes al poble', 'TV'] },
         cocina: { title: 'Cuina', tag: 'Planta principal', desc: "Totalment equipada i pensada perquè et sentis com a casa. Combina funcionalitat i estil rústic.", features: ['Forn', 'Microones', 'Nevera', 'Cafetera Nespresso'] },
-        galfer: { title: 'Habitació Gall Fer', tag: 'Habitació · Planta 1', desc: "Àmplia i lluminosa, aquesta habitació convida al descans des del primer moment.", features: ['Llit doble', 'Balcó', 'Vistes a la vall'] },
-        cabirol: { title: 'Habitació Cabirol', tag: 'Habitació · Planta 1', desc: "Habitació compartida àmplia i funcional, ideal per a famílies o grups.", features: ['Lliteres', 'Llum natural', 'Ideal famílies'] },
-        isard: { title: 'Habitació Isard', tag: 'Habitació · Planta 2', desc: "Habitació amb caràcter i vistes privilegiades, situada a la planta superior.", features: ['Llit doble', 'Balcó', 'Planta superior'] },
+        galfer: { title: 'Habitació Gall Fer', tag: 'Habitació · Planta 1', desc: "Àmplia i lluminosa, aquesta habitació convida al descans des del primer moment.", features: ['Llit doble', 'Balcó', 'Vistes a la vall'], imgAlt: 'Habitació Gall Fer amb llit doble i balcó amb vistes a la vall' },
+        cabirol: { title: 'Habitació Cabirol', tag: 'Habitació · Planta 1', desc: "Habitació compartida àmplia i funcional, ideal per a famílies o grups.", features: ['Lliteres', 'Llum natural', 'Ideal famílies'], imgAlt: 'Habitació Cabirol amb lliteres de fusta, ideal per a famílies o grups' },
+        isard: { title: 'Habitació Isard', tag: 'Habitació · Planta 2', desc: "Habitació amb caràcter i vistes privilegiades, situada a la planta superior.", features: ['Llit doble', 'Balcó', 'Planta superior'], imgAlt: 'Habitació Isard amb llit doble i balcó a la planta superior' },
         banys: { title: 'Banys', tag: '3 banys complets', desc: "Tres banys complets i funcionals, dissenyats per oferir comoditat i benestar durant l'estada.", features: ['Dutxa àmplia', 'Banyera', 'Assecador', 'Tovalloles incloses'] },
         bodega: { title: 'Celler i barbacoa', tag: 'Planta baixa', desc: "Un espai amb caràcter rústic, on la pedra i la fusta prenen el protagonisme.", features: ['Barbacoa', 'Llenya inclosa', 'Pedra original'] },
-        patio: { title: "L'espai de tothom", tag: 'Exterior', desc: "Espai exterior comú pensat per gaudir amb calma de l'entorn i compartir moments especials.", features: ['Pati de pedra', 'Zona exterior', 'Aparcament'] },
+        patio: { title: "L'espai de tothom", tag: 'Exterior', desc: "Espai exterior comú pensat per gaudir amb calma de l'entorn i compartir moments especials.", features: ['Pati de pedra', 'Zona exterior', 'Aparcament'], imgAlt: 'Pati exterior de pedra tradicional de Casa Jonico' },
       },
     },
     testimonials: {
@@ -531,7 +531,7 @@ export const translations = {
       ctaDesc: "Estarem encantats d'ajudar-te a planificar les teves activitats.",
       ctaButton: 'Contacta ara →',
       items: [
-        { tag: 'Hivern', title: 'Esquí', desc: "El Pirineu català és un dels destins d'esquí més complets de la Península Ibèrica.", subTitle: 'Estacions properes', items: [
+        { tag: 'Hivern', title: 'Esquí', imgAlt: 'Esquí al Pirineu — estació de Portainé a 29 km de Casa Jonico', desc: "El Pirineu català és un dels destins d'esquí més complets de la Península Ibèrica.", subTitle: 'Estacions properes', items: [
           { name: 'Portainé', detail: '29,3 km · 45 min. Estació familiar amb pistes per a tots els nivells.' },
           { name: 'Espot Esquí', detail: "18 km · 25 min. Integrada en l'entorn del Parc Nacional d'Aigüestortes." },
           { name: 'Baqueira-Beret', detail: "51,5 km · 53 min. Una de les estacions més grans d'Espanya, amb més de 160 km de pistes." },
@@ -780,7 +780,7 @@ export const translations = {
         { id: 'bienvenida', title: 'Welcome & assistance', tag: 'Included service', desc: 'We will personally welcome you on arrival to show you around the house and answer any questions.' },
         { id: 'detalle', title: 'Welcome gift', tag: 'Included service', desc: 'On arrival you will find a small gift of local products from the Pallars Sobirà.' },
         { id: 'ropa', title: 'Bed linen & towels', tag: 'Included service', desc: 'All beds come equipped with sheets and blankets. Each guest has their own set of bath towels.' },
-        { id: 'cocina', title: 'Fully equipped kitchen', tag: 'Included service', desc: 'Oven, hob, microwave, extractor hood, fridge, Nespresso machine and full utensils.' },
+        { id: 'cocina', title: 'Fully equipped kitchen', tag: 'Included service', desc: 'Oven, hob, microwave, extractor hood, fridge, Nespresso machine and full utensils.', imgAlt: 'Nespresso coffee machine and fully equipped kitchen at Casa Jonico' },
         { id: 'juegos', title: 'Board games', tag: 'Included service', desc: 'A selection of games: cards, ludo, chess and more. Perfect for rainy afternoons or evenings by the fireplace.' },
         { id: 'calefaccion', title: 'Heating & air conditioning', tag: 'Included service', desc: 'Central heating for cold months and air conditioning for summer. Comfort guaranteed all year round.' },
         { id: 'chimenea', title: 'Fireplace', tag: 'Included service', desc: 'The living room has a wood-burning fireplace that creates a unique atmosphere on mountain evenings. Firewood included.' },
@@ -804,12 +804,12 @@ export const translations = {
       zones: {
         sala: { title: 'Living room', tag: 'Main floor', desc: 'A spacious and bright space with high wooden ceilings, fireplace and large windows with beautiful views of the village.', features: ['Fireplace', 'Wooden ceilings', 'Village views', 'TV'] },
         cocina: { title: 'Kitchen', tag: 'Main floor', desc: 'Fully equipped, combining functionality and rustic style with light wood furniture and spacious worktops.', features: ['Oven', 'Microwave', 'Fridge', 'Nespresso machine'] },
-        galfer: { title: 'Gall Fer Room', tag: 'Bedroom · Floor 1', desc: 'Spacious and bright, decorated in soft tones and natural materials, combining simplicity, warmth and comfort.', features: ['Double bed', 'Balcony', 'Valley views'] },
-        cabirol: { title: 'Cabirol Room', tag: 'Bedroom · Floor 1', desc: 'Spacious and functional shared bedroom, ideal for families or groups, with light wooden bunk beds.', features: ['Bunk beds', 'Natural light', 'Family-friendly'] },
-        isard: { title: 'Isard Room', tag: 'Bedroom · Floor 2', desc: 'A characterful room with privileged views on the top floor, with double bed and balcony access.', features: ['Double bed', 'Balcony', 'Top floor'] },
+        galfer: { title: 'Gall Fer Room', tag: 'Bedroom · Floor 1', desc: 'Spacious and bright, decorated in soft tones and natural materials, combining simplicity, warmth and comfort.', features: ['Double bed', 'Balcony', 'Valley views'], imgAlt: 'Gall Fer bedroom with double bed and balcony with valley views' },
+        cabirol: { title: 'Cabirol Room', tag: 'Bedroom · Floor 1', desc: 'Spacious and functional shared bedroom, ideal for families or groups, with light wooden bunk beds.', features: ['Bunk beds', 'Natural light', 'Family-friendly'], imgAlt: 'Cabirol shared bedroom with wooden bunk beds, ideal for families or groups' },
+        isard: { title: 'Isard Room', tag: 'Bedroom · Floor 2', desc: 'A characterful room with privileged views on the top floor, with double bed and balcony access.', features: ['Double bed', 'Balcony', 'Top floor'], imgAlt: 'Isard bedroom with double bed and top-floor balcony' },
         banys: { title: 'Bathrooms', tag: '3 full bathrooms', desc: 'Three complete and functional bathrooms combining warm wood with light finishes for a sense of spaciousness.', features: ['Spacious shower', 'Bathtub', 'Hairdryer', 'Towels included'] },
         bodega: { title: 'Cellar & barbecue', tag: 'Ground floor', desc: 'A rustic space where stone and wood take centre stage, combining tradition and functionality.', features: ['Barbecue', 'Firewood included', 'Original stonework'] },
-        patio: { title: "Everyone's space", tag: 'Exterior', desc: 'A shared outdoor area — a traditional, spacious stone courtyard that preserves the authentic character of the house.', features: ['Stone courtyard', 'Outdoor area', 'Parking'] },
+        patio: { title: "Everyone's space", tag: 'Exterior', desc: 'A shared outdoor area — a traditional, spacious stone courtyard that preserves the authentic character of the house.', features: ['Stone courtyard', 'Outdoor area', 'Parking'], imgAlt: 'Traditional stone outdoor patio at Casa Jonico' },
       },
     },
     testimonials: {
@@ -841,7 +841,7 @@ export const translations = {
       ctaDesc: 'We will be happy to help you plan your activities during your stay.',
       ctaButton: 'Contact us →',
       items: [
-        { tag: 'Winter', title: 'Skiing', desc: 'The Catalan Pyrenees is one of the most complete ski destinations on the Iberian Peninsula.', subTitle: 'Nearby resorts', items: [
+        { tag: 'Winter', title: 'Skiing', imgAlt: 'Skiing in the Pyrenees — Portainé resort 29 km from Casa Jonico', desc: 'The Catalan Pyrenees is one of the most complete ski destinations on the Iberian Peninsula.', subTitle: 'Nearby resorts', items: [
           { name: 'Portainé', detail: '29.3 km · 45 min. Family resort with slopes for all levels.' },
           { name: 'Espot Esquí', detail: "18 km · 25 min. Integrated into the Aigüestortes National Park." },
           { name: 'Baqueira-Beret', detail: '51.5 km · 53 min. Over 160 km of slopes.' },
