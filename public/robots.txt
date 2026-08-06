@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Netlify Functions no aporten valor SEO
+Disallow: /.netlify/
+
+Sitemap: https://casajonicomontardit.com/sitemap.xml

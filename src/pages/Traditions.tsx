@@ -24,7 +24,8 @@ export default function Traditions() {
           <img
             src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop"
             className="h-full w-full object-cover"
-            alt="forest left"
+            alt=""
+            loading="lazy"
             referrerPolicy="no-referrer"
           />
         </div>
@@ -32,7 +33,8 @@ export default function Traditions() {
           <img
             src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop"
             className="h-full w-full object-cover"
-            alt="forest right"
+            alt=""
+            loading="lazy"
             referrerPolicy="no-referrer"
           />
         </div>

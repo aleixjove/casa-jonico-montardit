@@ -204,7 +204,7 @@ export default function Space() {
                 <img
                   src={zonePhotos[activeZone][photoIndex]}
                   className="w-full h-full object-contain"
-                  alt="foto ampliada"
+                  alt={`${sp.zones[activeZone as keyof typeof sp.zones].title} — foto ${photoIndex + 1}`}
                   referrerPolicy="no-referrer"
                 />
                 <button onClick={prevPhoto} className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white/30 transition-colors">

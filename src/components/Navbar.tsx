@@ -10,6 +10,8 @@ const flags = {
   en: 'https://flagcdn.com/w40/gb.png',
 };
 
+const langNames = { ca: 'Català', es: 'Español', en: 'English' };
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -134,18 +136,19 @@ export default function Navbar() {
             </Link>
 
             {/* Selector banderes */}
-            <div className="flex items-center gap-1 border border-white/20 rounded-full px-2 py-1">
+            <div className="flex items-center gap-1 border border-white/20 rounded-full px-2 py-1" role="group" aria-label="Idioma">
               {(['ca', 'es', 'en'] as const).map((lang) => (
                 <button
                   key={lang}
                   onClick={() => setLocale(lang)}
-                  title={lang.toUpperCase()}
+                  aria-label={langNames[lang]}
+                  aria-pressed={locale === lang}
                   className={cn(
                     "transition-all rounded-full p-0.5",
                     locale === lang ? "opacity-100 scale-110" : "opacity-40 hover:opacity-80"
                   )}
                 >
-                  <img src={flags[lang]} alt={lang} className="w-6 h-4 object-cover rounded-sm" />
+                  <img src={flags[lang]} alt="" className="w-6 h-4 object-cover rounded-sm" />
                 </button>
               ))}
             </div>
@@ -153,33 +156,47 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden p-2 ml-auto" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className="md:hidden p-2 ml-auto"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? 'Tancar menú' : 'Obrir menú'}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+        >
           {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
-      <div className={cn(
-        "fixed top-0 left-0 w-full h-full bg-primary z-[60] flex flex-col items-center justify-start gap-4 transition-transform duration-500 md:hidden overflow-y-auto py-20 px-6",
-        isOpen ? "translate-x-0 pointer-events-auto" : "translate-x-full pointer-events-none"
-      )}>
-        <button className="absolute top-5 right-6 text-white" onClick={() => setIsOpen(false)}>
+      <div
+        id="mobile-menu"
+        className={cn(
+          "fixed top-0 left-0 w-full h-full bg-primary z-[60] flex flex-col items-center justify-start gap-4 transition-transform duration-500 md:hidden overflow-y-auto py-20 px-6",
+          isOpen ? "translate-x-0 pointer-events-auto" : "translate-x-full pointer-events-none"
+        )}
+      >
+        <button
+          className="absolute top-5 right-6 text-white"
+          onClick={() => setIsOpen(false)}
+          aria-label="Tancar menú"
+        >
           <X className="w-6 h-6" />
         </button>
 
         {/* Selector banderes mòbil */}
-        <div className="flex items-center gap-3 border border-white/20 rounded-full px-4 py-2">
+        <div className="flex items-center gap-3 border border-white/20 rounded-full px-4 py-2" role="group" aria-label="Idioma">
           {(['ca', 'es', 'en'] as const).map((lang) => (
             <button
               key={lang}
               onClick={() => setLocale(lang)}
-              title={lang.toUpperCase()}
+              aria-label={langNames[lang]}
+              aria-pressed={locale === lang}
               className={cn(
                 "transition-all rounded-full p-0.5",
                 locale === lang ? "opacity-100 scale-110" : "opacity-40 hover:opacity-80"
               )}
             >
-              <img src={flags[lang]} alt={lang} className="w-8 h-5 object-cover rounded-sm" />
+              <img src={flags[lang]} alt="" className="w-8 h-5 object-cover rounded-sm" />
             </button>
           ))}
         </div>
