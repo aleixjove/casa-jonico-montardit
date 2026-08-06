@@ -15,9 +15,10 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/familia.jpg"
-            alt="Pirineo Catalán"
+            src="/familia.webp"
+            alt="Família gaudint de les vistes al Pirineu Català des de Casa Jonico de Montardit"
             className="w-full h-full object-cover scale-105"
+            fetchPriority="high"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-black/60" />
@@ -156,9 +157,10 @@ export default function Home() {
             className="relative"
           >
             <img
-              src="/fora2.jpg"
-              alt="Casa Rural Exterior"
+              src="/fora2.webp"
+              alt="Exterior de Casa Jonico, casa rural de pedra a Montardit de Dalt (Pallars Sobirà)"
               className="rounded-2xl shadow-2xl w-full aspect-[4/5] object-cover"
+              loading="lazy"
               referrerPolicy="no-referrer"
             />
             <div className="absolute -bottom-10 -left-10 bg-primary p-8 rounded-2xl hidden md:block">

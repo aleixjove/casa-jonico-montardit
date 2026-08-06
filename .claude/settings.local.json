@@ -5,7 +5,8 @@
       "Bash(npm install:*)",
       "Bash(npx tsc *)",
       "Bash(node -e \"try { require\\('sharp'\\); console.log\\('sharp: OK'\\); } catch\\(e\\) { console.log\\('sharp: NO'\\); }\")",
-      "Bash(node -e *)"
+      "Bash(node -e *)",
+      "Bash(node scripts/convert-to-webp.js)"
     ]
   }
 }

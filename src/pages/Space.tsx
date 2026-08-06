@@ -8,7 +8,7 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 const zonePhotos: Record<string, string[]> = {
   sala: [
-    '/salaest1.jpeg',
+    '/salaest1.webp',
     'https://static.wixstatic.com/media/fb9e9f_15cd150a805d4cfc9ac4e633985ef63e~mv2.png',
     'https://static.wixstatic.com/media/fb9e9f_2bcedf5997ad4b8a99a435195ce08551~mv2.png',
     'https://static.wixstatic.com/media/fb9e9f_1e91fc0543a14bae95d39cfb47d623d8~mv2.png',
@@ -51,7 +51,7 @@ const zonePhotos: Record<string, string[]> = {
     'https://static.wixstatic.com/media/fb9e9f_b452d48e048f45b59992f1e1ac44c0a7~mv2.png',
     'https://static.wixstatic.com/media/fb9e9f_8b1198ad9ca34f3b9b5ebd90f7924500~mv2.png',
     'https://static.wixstatic.com/media/fb9e9f_c12b6285a22e493fbd750ac9caf765fb~mv2.png',
-    '/vista1.jpeg',
+    '/vista1.webp',
   ],
 };
 
@@ -86,10 +86,10 @@ export default function Space() {
       {/* Header */}
       <section className="bg-[#f5f2ed] pt-24 pb-16 px-6 relative overflow-hidden border-b border-[#ddd6c8]">
         <div className="absolute left-0 top-0 bottom-0 w-1/5 hidden xl:block opacity-10 pointer-events-none">
-          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop" className="h-full w-full object-cover" alt="" referrerPolicy="no-referrer" />
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop" className="h-full w-full object-cover" alt="" loading="lazy" referrerPolicy="no-referrer" />
         </div>
         <div className="absolute right-0 top-0 bottom-0 w-1/5 hidden xl:block opacity-10 pointer-events-none">
-          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop" className="h-full w-full object-cover" alt="" referrerPolicy="no-referrer" />
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop" className="h-full w-full object-cover" alt="" loading="lazy" referrerPolicy="no-referrer" />
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-2xl md:text-5xl font-display text-[#2d4a2d] mb-10 leading-tight">
@@ -130,20 +130,20 @@ export default function Space() {
                 <div className="w-full md:w-1/2">
                   <div className="grid grid-cols-2 grid-rows-[200px_140px] gap-2">
                     <div className="row-span-2 relative overflow-hidden cursor-pointer group rounded-sm" onClick={() => openViewer(id, 0)}>
-                      <img src={photos[0]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={zone.title} referrerPolicy="no-referrer" />
+                      <img src={photos[0]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={zone.title} loading="lazy" referrerPolicy="no-referrer" />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                         <Maximize2 className="text-white opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all" />
                       </div>
                     </div>
                     <div className="relative overflow-hidden cursor-pointer group rounded-sm" onClick={() => openViewer(id, 1)}>
                       {photos[1]
-                        ? <img src={photos[1]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={`${zone.title} 2`} referrerPolicy="no-referrer" />
+                        ? <img src={photos[1]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={`${zone.title} 2`} loading="lazy" referrerPolicy="no-referrer" />
                         : <div className="w-full h-full bg-[#c8c0b0] flex items-center justify-center text-white/50">📸</div>
                       }
                     </div>
                     <div className="relative overflow-hidden cursor-pointer group rounded-sm" onClick={() => openViewer(id, 2)}>
                       {photos[2]
-                        ? <img src={photos[2]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={`${zone.title} 3`} referrerPolicy="no-referrer" />
+                        ? <img src={photos[2]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={`${zone.title} 3`} loading="lazy" referrerPolicy="no-referrer" />
                         : <div className="w-full h-full bg-[#c8c0b0] flex items-center justify-center text-white/50">📸</div>
                       }
                       {photos.length > 3 && (

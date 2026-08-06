@@ -29,7 +29,7 @@ const activityLinks = [
 ];
 
 const activityImages = [
-  'portainehotel.png',
+  '/portainehotel.webp',
   'https://static.wixstatic.com/media/fb9e9f_1baa9e2f5d854a7e9331e020266c57b5~mv2.jpg',
   'https://static.wixstatic.com/media/fb9e9f_a41d0480f3604e909dd7373d27cfd367~mv2.png',
   'https://static.wixstatic.com/media/fb9e9f_696066c7140e4176857ee7a8c1f5f514~mv2.png',
@@ -56,6 +56,7 @@ export default function Activities() {
             src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop"
             className="h-full w-full object-cover"
             alt=""
+            loading="lazy"
             referrerPolicy="no-referrer"
           />
         </div>
@@ -64,6 +65,7 @@ export default function Activities() {
             src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop"
             className="h-full w-full object-cover"
             alt=""
+            loading="lazy"
             referrerPolicy="no-referrer"
           />
         </div>
@@ -107,6 +109,7 @@ export default function Activities() {
                 src={activityImages[idx]}
                 alt={activity.title}
                 className="w-full h-auto object-cover"
+                loading="lazy"
                 referrerPolicy="no-referrer"
               />
             </div>

@@ -7,15 +7,15 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 const serviceImages: Record<string, string> = {
   bienvenida: 'https://static.wixstatic.com/media/fb9e9f_15f181addf4545a681abae4625f42064~mv2.jpeg',
-  detalle: '/benv1.jpg',
-  ropa: '/toallas.jpg',
-  cocina: '/cafe.jpg',
-  juegos: '/juegos.jpg',
-  calefaccion: '/aire.jpg',
-  chimenea: '/fuego.jpg',
-  barbacoa: '/barbacoa.jpg',
-  lena: '/leña.jpg',
-  parking: '/parking.jpg',
+  detalle: '/benv1.webp',
+  ropa: '/toallas.webp',
+  cocina: '/cafe.webp',
+  juegos: '/juegos.webp',
+  calefaccion: '/aire.webp',
+  chimenea: '/fuego.webp',
+  barbacoa: '/barbacoa.webp',
+  lena: '/leña.webp',
+  parking: '/parking.webp',
 };
 
 export default function Services() {
@@ -28,10 +28,10 @@ export default function Services() {
       {/* Header */}
       <section className="bg-[#f5f2ed] pt-24 pb-16 px-6 relative overflow-hidden border-b border-[#ddd6c8]">
         <div className="absolute left-0 top-0 bottom-0 w-1/5 hidden xl:block opacity-10 pointer-events-none">
-          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop" className="h-full w-full object-cover" alt="" referrerPolicy="no-referrer" />
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop" className="h-full w-full object-cover" alt="" loading="lazy" referrerPolicy="no-referrer" />
         </div>
         <div className="absolute right-0 top-0 bottom-0 w-1/5 hidden xl:block opacity-10 pointer-events-none">
-          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop" className="h-full w-full object-cover" alt="" referrerPolicy="no-referrer" />
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop" className="h-full w-full object-cover" alt="" loading="lazy" referrerPolicy="no-referrer" />
         </div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -83,6 +83,7 @@ export default function Services() {
                           src={serviceImages[service.id]}
                           alt={service.title}
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
                           referrerPolicy="no-referrer"
                         />
                       ) : (
@@ -125,9 +126,10 @@ export default function Services() {
       <section className="max-w-5xl mx-auto px-6 pb-24">
         <div className="relative rounded-3xl overflow-hidden h-[400px] shadow-2xl">
           <img
-            src="/salaest1.jpeg"
-            alt="Interior acollidor"
+            src="/salaest1.webp"
+            alt="Sala d'estar interior de Casa Jonico amb decoració càlida i acollidora"
             className="w-full h-full object-cover"
+            loading="lazy"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-[#2d4a2d]/40 flex items-center justify-center text-center p-6 backdrop-blur-[2px]">

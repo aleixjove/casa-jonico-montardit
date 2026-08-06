@@ -152,7 +152,7 @@ export default function Location() {
           </div>
 
           <div className="relative h-[400px] rounded-sm overflow-hidden border border-[#e0d8c8] group">
-            <img src="/vista1.jpg" alt="Vista de Montardit de Dalt" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <img src="/vista1.webp" alt="Vista panoràmica de Montardit de Dalt al Pallars Sobirà des de Casa Jonico" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div className="absolute inset-0 bg-[#1a2e1a]/60" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center p-8">
