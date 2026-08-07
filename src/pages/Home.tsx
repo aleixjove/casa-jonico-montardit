@@ -15,7 +15,9 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/familia.webp"
+            src="/familia-1200.webp"
+            srcSet="/familia-480.webp 480w, /familia-768.webp 768w, /familia-1200.webp 1200w, /familia.webp 2000w"
+            sizes="100vw"
             alt="Família gaudint de les vistes al Pirineu Català des de Casa Jonico de Montardit"
             className="w-full h-full object-cover scale-105"
             fetchPriority="high"

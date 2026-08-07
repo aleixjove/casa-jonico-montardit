@@ -6,6 +6,16 @@
     <title>Casa Jonico de Montardit - Allotjament Rural al Pallars Sobirà</title>
     <meta name="description" content="Casa rural per a grups i famílies al cor del Pallars Sobirà. Vistes espectaculars, totalment equipada, a pocs minuts de Sort i les estacions d'esquí. Reserva ara!" />
 
+    <!-- Preload hero image (LCP element) — browser picks correct size from srcset -->
+    <link
+      rel="preload"
+      as="image"
+      href="/familia-1200.webp"
+      imagesrcset="/familia-480.webp 480w, /familia-768.webp 768w, /familia-1200.webp 1200w, /familia.webp 2000w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+
     <!-- Google Fonts (preconnect + parallel load, trimmed to used weights) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
