@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Plus } from 'lucide-react';
 import ScrollToTop from '../components/ScrollToTop';
@@ -8,6 +8,29 @@ export default function Faqs() {
   const { t } = useLanguage();
   const f = t.faqs;
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  // Inject FAQPage Schema.org JSON-LD (per locale, cleaned up on unmount/locale change)
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'faq-jsonld';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: f.items.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.a.replace(/<[^>]+>/g, ''),
+        },
+      })),
+    });
+    document.head.appendChild(script);
+    return () => {
+      document.getElementById('faq-jsonld')?.remove();
+    };
+  }, [f.items]);
 
   return (
     <div className="pt-20 bg-[#f5f0e8] min-h-screen">

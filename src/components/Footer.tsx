@@ -83,8 +83,8 @@ export default function Footer() {
               { name: t.nav.reservar, path: '/reservas' },
             ].map((link) => (
               <li key={link.path}>
-                <Link 
-                  to={link.path} 
+                <Link
+                  to={link.path}
                   className="group text-xs font-light text-[#a0b4a0] flex items-center gap-2 transition-colors hover:text-secondary"
                 >
                   <span className="w-3.5 h-[1px] bg-[#cd9a55] opacity-50 transition-all group-hover:opacity-100 group-hover:w-5" />
@@ -92,6 +92,24 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
+            <li className="pt-2 mt-1 border-t border-secondary/10">
+              <Link
+                to="/casa-rural-pallars-sobira"
+                className="group text-xs font-light text-[#a0b4a0] flex items-center gap-2 transition-colors hover:text-secondary"
+              >
+                <span className="w-3.5 h-[1px] bg-[#cd9a55] opacity-50 transition-all group-hover:opacity-100 group-hover:w-5" />
+                {t.descobreixMes.card1}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/casa-rural-grupos-familias"
+                className="group text-xs font-light text-[#a0b4a0] flex items-center gap-2 transition-colors hover:text-secondary"
+              >
+                <span className="w-3.5 h-[1px] bg-[#cd9a55] opacity-50 transition-all group-hover:opacity-100 group-hover:w-5" />
+                {t.descobreixMes.card2}
+              </Link>
+            </li>
           </ul>
         </div>
 
