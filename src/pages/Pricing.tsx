@@ -6,6 +6,12 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 const FORMSPREE_ID = 'xaqdkzdn';
 
+declare global {
+  interface Window {
+    gtag?: (command: string, eventName: string, params?: Record<string, unknown>) => void;
+  }
+}
+
 const seasons = [
   { name: 'alta', months: [6], price: 275, minNights: 3 },
   { name: 'alta', months: [7], price: 275, minNights: 4 },
@@ -31,6 +37,13 @@ export default function Pricing() {
       .then(r => r.json())
       .then(data => { if (data.blockedDates) setOccupiedDates(data.blockedDates); })
       .catch(() => {}); // si falla, el calendari queda sense dates bloquejades
+  }, []);
+
+  // GA4: qualified lead (arribada a /reservas)
+  useEffect(() => {
+    window.gtag?.('event', 'qualify_lead', {
+      page_location: window.location.href,
+    });
   }, []);
   const [selectStart, setSelectStart] = useState<string | null>(null);
   const [selectEnd, setSelectEnd] = useState<string | null>(null);
@@ -163,8 +176,18 @@ export default function Pricing() {
           [p.fieldMensaje]: formData.mensaje || '—',
         })
       });
-      if (response.ok) setStatus('success');
-      else throw new Error('Error');
+      if (response.ok) {
+        setStatus('success');
+        // GA4: converted lead (només si el correu s'ha enviat sense error)
+        window.gtag?.('event', 'close_convert_lead', {
+          check_in_date: selectStart,
+          check_out_date: selectEnd,
+          value: Math.round(calc.total * 0.88),
+          currency: 'EUR',
+        });
+      } else {
+        throw new Error('Error');
+      }
     } catch {
       setStatus('error');
       alert(p.alertError);
