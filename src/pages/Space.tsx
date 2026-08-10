@@ -109,43 +109,36 @@ export default function Space() {
                 <div className="w-full md:w-1/2">
                   <div className="grid grid-cols-2 grid-rows-[200px_140px] gap-2">
                     <div
-                      className={`row-span-2 relative overflow-hidden group rounded-sm ${photos[0] ? 'cursor-pointer' : 'cursor-default'}`}
-                      onClick={photos[0] ? () => openViewer(id, 0) : undefined}
+                      className={`relative overflow-hidden cursor-pointer group rounded-sm ${photos.length === 1 ? 'col-span-2 row-span-2' : 'row-span-2'}`}
+                      onClick={() => openViewer(id, 0)}
                     >
-                      {photos[0]
-                        ? <>
-                            <img src={photos[0]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={('imgAlt' in zone && zone.imgAlt) || zone.title} loading="lazy" referrerPolicy="no-referrer" />
-                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                              <Maximize2 className="text-white opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all" />
-                            </div>
-                          </>
-                        : <div className="w-full h-full bg-[#c8c0b0] flex items-center justify-center text-white/50 text-4xl">📸</div>
-                      }
+                      <img src={photos[0]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={('imgAlt' in zone && zone.imgAlt) || zone.title} loading="lazy" referrerPolicy="no-referrer" />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                        <Maximize2 className="text-white opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all" />
+                      </div>
                     </div>
-                    <div
-                      className={`relative overflow-hidden group rounded-sm ${photos[1] ? 'cursor-pointer' : 'cursor-default'}`}
-                      onClick={photos[1] ? () => openViewer(id, 1) : undefined}
-                    >
-                      {photos[1]
-                        ? <img src={photos[1]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={`${('imgAlt' in zone && zone.imgAlt) || zone.title} — foto 2`} loading="lazy" referrerPolicy="no-referrer" />
-                        : <div className="w-full h-full bg-[#c8c0b0] flex items-center justify-center text-white/50">📸</div>
-                      }
-                    </div>
-                    <div
-                      className={`relative overflow-hidden group rounded-sm ${photos[2] ? 'cursor-pointer' : 'cursor-default'}`}
-                      onClick={photos[2] ? () => openViewer(id, 2) : undefined}
-                    >
-                      {photos[2]
-                        ? <img src={photos[2]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={`${('imgAlt' in zone && zone.imgAlt) || zone.title} — foto 3`} loading="lazy" referrerPolicy="no-referrer" />
-                        : <div className="w-full h-full bg-[#c8c0b0] flex items-center justify-center text-white/50">📸</div>
-                      }
-                      {photos.length > 3 && (
-                        <div className="absolute inset-0 bg-[#2d4a2d]/75 flex flex-col items-center justify-center text-white">
-                          <span className="text-xl font-light">+{photos.length - 3}</span>
-                          <span className="text-[10px] uppercase tracking-widest opacity-70">{sp.verTodas}</span>
-                        </div>
-                      )}
-                    </div>
+                    {photos[1] && (
+                      <div
+                        className="relative overflow-hidden cursor-pointer group rounded-sm"
+                        onClick={() => openViewer(id, 1)}
+                      >
+                        <img src={photos[1]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={`${('imgAlt' in zone && zone.imgAlt) || zone.title} — foto 2`} loading="lazy" referrerPolicy="no-referrer" />
+                      </div>
+                    )}
+                    {photos[2] && (
+                      <div
+                        className="relative overflow-hidden cursor-pointer group rounded-sm"
+                        onClick={() => openViewer(id, 2)}
+                      >
+                        <img src={photos[2]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={`${('imgAlt' in zone && zone.imgAlt) || zone.title} — foto 3`} loading="lazy" referrerPolicy="no-referrer" />
+                        {photos.length > 3 && (
+                          <div className="absolute inset-0 bg-[#2d4a2d]/75 flex flex-col items-center justify-center text-white">
+                            <span className="text-xl font-light">+{photos.length - 3}</span>
+                            <span className="text-[10px] uppercase tracking-widest opacity-70">{sp.verTodas}</span>
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </div>
 
