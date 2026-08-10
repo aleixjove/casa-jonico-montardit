@@ -1,3 +1,21 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// ⚠️ AVÍS IMPORTANT — cobertura parcial d'overbooking
+// ─────────────────────────────────────────────────────────────────────────────
+// Aquesta funció NOMÉS bloqueja al calendari de la web les dates ocupades a
+// AIRBNB (via l'exportació iCal gratuïta del propi Airbnb).
+//
+// Booking.com NO està cobert per aquesta sincronia. Booking és actualment el
+// canal amb més volum (~17 reserves reals), per tant queda SENSE protecció
+// automàtica contra overbooking:
+//   → Cal revisar MANUALMENT el calendari de Booking.com al panell de
+//     l'extranet abans de confirmar qualsevol sol·licitud rebuda per la web.
+//
+// Fins fa poc utilitzàvem Smoobu (channel manager) que unificava Booking i
+// Airbnb en un únic iCal, però era de pagament i s'ha acabat la prova gratuïta.
+// Si algun dia es reactiva, es pot posar SMOOBU_ICAL_URL i tornarà a ser
+// prioritari (mira la lògica del fallback a sota).
+// ─────────────────────────────────────────────────────────────────────────────
+
 function parseICalDates(text) {
   const dates = new Set();
   const events = text.split('BEGIN:VEVENT');
@@ -34,12 +52,15 @@ function parseICalDates(text) {
 }
 
 export const handler = async () => {
-  const icalUrl = process.env.SMOOBU_ICAL_URL || process.env.AIRBNB_ICAL_URL;
+  // Font principal: AIRBNB_ICAL_URL (iCal gratuït d'Airbnb).
+  // Fallback: SMOOBU_ICAL_URL, per si algun dia es torna a activar Smoobu
+  // (que cobriria també Booking i unificaria fonts).
+  const icalUrl = process.env.AIRBNB_ICAL_URL || process.env.SMOOBU_ICAL_URL;
 
   if (!icalUrl) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'SMOOBU_ICAL_URL not configured' }),
+      body: JSON.stringify({ error: 'AIRBNB_ICAL_URL not configured' }),
     };
   }
 
