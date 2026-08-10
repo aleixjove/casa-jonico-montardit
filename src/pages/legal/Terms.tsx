@@ -22,7 +22,7 @@ const content = {
       },
       {
         title: '4. Precios',
-        body: 'Los precios publicados en la web son por noche y para toda la casa. Se aplica un descuento del 12% sobre las tarifas de plataformas externas (Booking.com, Airbnb) para reservas directas. Los precios incluyen IVA.',
+        body: 'Los precios publicados en la web son por noche y para toda la casa. Se aplica un descuento del 15% sobre las tarifas de plataformas externas (Booking.com, Airbnb) para reservas directas. Los precios incluyen IVA.',
       },
       {
         title: '5. Normas de la casa',
@@ -58,7 +58,7 @@ const content = {
       },
       {
         title: '4. Preus',
-        body: 'Els preus publicats a la web són per nit i per a tota la casa. S\'aplica un descompte del 12% sobre les tarifes de plataformes externes (Booking.com, Airbnb) per a reserves directes. Els preus inclouen IVA.',
+        body: 'Els preus publicats a la web són per nit i per a tota la casa. S\'aplica un descompte del 15% sobre les tarifes de plataformes externes (Booking.com, Airbnb) per a reserves directes. Els preus inclouen IVA.',
       },
       {
         title: '5. Normes de la casa',
@@ -94,7 +94,7 @@ const content = {
       },
       {
         title: '4. Prices',
-        body: 'Prices published on the website are per night for the entire house. A 12% discount applies compared to external platform rates (Booking.com, Airbnb) for direct bookings. Prices include VAT.',
+        body: 'Prices published on the website are per night for the entire house. A 15% discount applies compared to external platform rates (Booking.com, Airbnb) for direct bookings. Prices include VAT.',
       },
       {
         title: '5. House rules',

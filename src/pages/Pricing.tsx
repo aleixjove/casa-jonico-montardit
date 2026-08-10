@@ -13,8 +13,7 @@ declare global {
 }
 
 const seasons = [
-  { name: 'alta', months: [6], price: 275, minNights: 3 },
-  { name: 'alta', months: [7], price: 275, minNights: 4 },
+  { name: 'alta', months: [6, 7], price: 275, minNights: 3 },
   { name: 'media', months: [5, 8], price: 235, minNights: 2 },
   { name: 'baja', months: null, price: 210, minNights: 2 },
 ];
@@ -172,7 +171,7 @@ export default function Pricing() {
           Noches: calc.nights,
           [p.fieldPersonas]: formData.personas || '—',
           [p.fieldNinos]: formData.ninos,
-          Total: Math.round(calc.total * 0.88) + ' ' + p.totalSuf,
+          Total: Math.round(calc.total * 0.85) + ' ' + p.totalSuf,
           [p.fieldMensaje]: formData.mensaje || '—',
         })
       });
@@ -182,7 +181,7 @@ export default function Pricing() {
         window.gtag?.('event', 'close_convert_lead', {
           check_in_date: selectStart,
           check_out_date: selectEnd,
-          value: Math.round(calc.total * 0.88),
+          value: Math.round(calc.total * 0.85),
           currency: 'EUR',
         });
       } else {
@@ -321,7 +320,7 @@ export default function Pricing() {
     const calc = calcTotal(selectStart, selectEnd);
     const fmt = (d: string) => new Date(d + 'T00:00:00').toLocaleDateString(p.summaryLocale, { day: 'numeric', month: 'short', year: 'numeric' });
     const totalOriginal = calc.total;
-    const totalDescuento = Math.round(totalOriginal * 0.88);
+    const totalDescuento = Math.round(totalOriginal * 0.85);
     const estalvi = totalOriginal - totalDescuento;
 
     return (
@@ -362,7 +361,7 @@ export default function Pricing() {
             <div className="text-right">
               <div className="flex items-center justify-end gap-2 mb-1">
                 <span className="text-xs text-white/40 line-through">{totalOriginal} €</span>
-                <span className="bg-[#b07d3a] text-white text-[10px] font-bold px-2 py-0.5 rounded-full">-12%</span>
+                <span className="bg-[#b07d3a] text-white text-[10px] font-bold px-2 py-0.5 rounded-full">-15%</span>
               </div>
               <span className="font-display text-2xl text-white">{totalDescuento} €</span>
             </div>

@@ -53,7 +53,7 @@ export default function PromoPopup() {
             <div className="p-8 md:p-12 text-center flex flex-col items-center">
               {/* Main Discount */}
               <div className="mb-2">
-                <span className="text-6xl md:text-8xl font-display italic text-white leading-none">12%</span>
+                <span className="text-6xl md:text-8xl font-display italic text-white leading-none">15%</span>
               </div>
               <h3 className="text-lg md:text-xl font-display text-white mb-8">
                 {p.title}
