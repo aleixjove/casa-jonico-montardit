@@ -8,50 +8,29 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 const zonePhotos: Record<string, string[]> = {
   sala: [
-    '/salaest1.webp',
-    'https://static.wixstatic.com/media/fb9e9f_15cd150a805d4cfc9ac4e633985ef63e~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_2bcedf5997ad4b8a99a435195ce08551~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_1e91fc0543a14bae95d39cfb47d623d8~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_8e93fc3daf8249778d3fd4614dc85d66~mv2.png',
+    '/p3/p31.webp', '/p3/p32.webp', '/p3/p33.webp', '/p3/p34.webp', '/p3/p35.webp',
+    '/p3/p38.webp', '/p3/p39.webp', '/p3/p310.webp', '/p3/p311.webp', '/p3/p313.webp',
   ],
   cocina: [
-    'https://static.wixstatic.com/media/fb9e9f_1a2d652b85f54d46b42d0c2bcad5ace7~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_9ac6da6e3fc148b6a0f2e8a1247c53cd~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_ff239d87fd1b476f86a04c7351f07a40~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_97f6061f8bf64503a632d9b43db08020~mv2.png',
+    '/p3/p314.webp', '/p3/p315.webp', '/p3/p316.webp', '/p3/p317.webp',
   ],
   galfer: [
-    'https://static.wixstatic.com/media/fb9e9f_6f08f1a09d9846898dfc3dfd9745525a~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_f827026be4a6444bbd7801408cef3d38~mv2.jpg',
-    'https://static.wixstatic.com/media/fb9e9f_0a12a9abbdb84c558051fc601a518b61~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_975b61956f8a4551805705456c2bef8f~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_a7487e1db28f4f0e8192ede8e80142a7~mv2.png',
+    '/p2/p21.webp', '/p2/p22.webp', '/p2/p29.webp', '/p2/p210.webp', '/p2/p211.webp', '/p2/p212.webp',
   ],
   cabirol: [
-    'https://static.wixstatic.com/media/fb9e9f_f06bee44df414d5cb3b88b25451f4bca~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_ffd2bddd801446a3a44b8d017f15b3c0~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_1929035684d340a0bb52c1da9c3854a4~mv2.png',
+    '/p2/p26.webp', '/p2/p27.webp', '/p2/p28.webp',
   ],
   isard: [
-    'https://static.wixstatic.com/media/fb9e9f_737473080e934330bae0c550133704bc~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_1393b9b69c134366a92dc9958b989c3e~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_cf474ba773b94e23beec9b85c48238c3~mv2.png',
+    '/p1/p13.webp', '/p1/p14.webp', '/p1/p15.webp', '/p1/p16.webp',
   ],
   banys: [
-    'https://static.wixstatic.com/media/fb9e9f_f6a1f3df313b427484c95bfa8468d6a1~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_56623a7f18604c60a381f3f418606339~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_410ae6eebc5a4f60af55b3e6d6aaece3~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_bed722632ffb4fbb862e5448950a2be2~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_11a2c6c12e474a97b0bd59a0d1780da4~mv2.png',
+    '/p2/p23.webp', '/p2/p24.webp', '/p2/p25.webp', '/p1/p11.webp', '/p3/p36.webp', '/p3/p37.webp',
   ],
   bodega: [
-    'https://static.wixstatic.com/media/fb9e9f_ecf9445710054bcab1ff082d3e8646d2~mv2.png',
+    '/altres/p47.webp',
   ],
   patio: [
-    'https://static.wixstatic.com/media/fb9e9f_b452d48e048f45b59992f1e1ac44c0a7~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_8b1198ad9ca34f3b9b5ebd90f7924500~mv2.png',
-    'https://static.wixstatic.com/media/fb9e9f_c12b6285a22e493fbd750ac9caf765fb~mv2.png',
-    '/vista1.webp',
+    '/altres/p48.webp', '/altres/p49.webp', '/p2/p213.webp',
   ],
 };
 
@@ -129,19 +108,33 @@ export default function Space() {
                 {/* Photos grid */}
                 <div className="w-full md:w-1/2">
                   <div className="grid grid-cols-2 grid-rows-[200px_140px] gap-2">
-                    <div className="row-span-2 relative overflow-hidden cursor-pointer group rounded-sm" onClick={() => openViewer(id, 0)}>
-                      <img src={photos[0]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={('imgAlt' in zone && zone.imgAlt) || zone.title} loading="lazy" referrerPolicy="no-referrer" />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                        <Maximize2 className="text-white opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all" />
-                      </div>
+                    <div
+                      className={`row-span-2 relative overflow-hidden group rounded-sm ${photos[0] ? 'cursor-pointer' : 'cursor-default'}`}
+                      onClick={photos[0] ? () => openViewer(id, 0) : undefined}
+                    >
+                      {photos[0]
+                        ? <>
+                            <img src={photos[0]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={('imgAlt' in zone && zone.imgAlt) || zone.title} loading="lazy" referrerPolicy="no-referrer" />
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                              <Maximize2 className="text-white opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all" />
+                            </div>
+                          </>
+                        : <div className="w-full h-full bg-[#c8c0b0] flex items-center justify-center text-white/50 text-4xl">📸</div>
+                      }
                     </div>
-                    <div className="relative overflow-hidden cursor-pointer group rounded-sm" onClick={() => openViewer(id, 1)}>
+                    <div
+                      className={`relative overflow-hidden group rounded-sm ${photos[1] ? 'cursor-pointer' : 'cursor-default'}`}
+                      onClick={photos[1] ? () => openViewer(id, 1) : undefined}
+                    >
                       {photos[1]
                         ? <img src={photos[1]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={`${('imgAlt' in zone && zone.imgAlt) || zone.title} — foto 2`} loading="lazy" referrerPolicy="no-referrer" />
                         : <div className="w-full h-full bg-[#c8c0b0] flex items-center justify-center text-white/50">📸</div>
                       }
                     </div>
-                    <div className="relative overflow-hidden cursor-pointer group rounded-sm" onClick={() => openViewer(id, 2)}>
+                    <div
+                      className={`relative overflow-hidden group rounded-sm ${photos[2] ? 'cursor-pointer' : 'cursor-default'}`}
+                      onClick={photos[2] ? () => openViewer(id, 2) : undefined}
+                    >
                       {photos[2]
                         ? <img src={photos[2]} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt={`${('imgAlt' in zone && zone.imgAlt) || zone.title} — foto 3`} loading="lazy" referrerPolicy="no-referrer" />
                         : <div className="w-full h-full bg-[#c8c0b0] flex items-center justify-center text-white/50">📸</div>

@@ -15,10 +15,10 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/familia-1200.webp"
-            srcSet="/familia-480.webp 480w, /familia-768.webp 768w, /familia-1200.webp 1200w, /familia.webp 2000w"
+            src="/p3/p312-1200.webp"
+            srcSet="/p3/p312-480.webp 480w, /p3/p312-768.webp 768w, /p3/p312-1200.webp 1200w, /p3/p312.webp 1448w"
             sizes="100vw"
-            alt="Família gaudint de les vistes al Pirineu Català des de Casa Jonico de Montardit"
+            alt="Vista del Pirineu Català des de Casa Jonico de Montardit"
             className="w-full h-full object-cover scale-105"
             fetchPriority="high"
             referrerPolicy="no-referrer"
@@ -189,8 +189,8 @@ export default function Home() {
             className="relative"
           >
             <img
-              src="/fora2.webp"
-              alt="Exterior de Casa Jonico, casa rural de pedra a Montardit de Dalt (Pallars Sobirà)"
+              src="/altres/p47.webp"
+              alt="Sala interior de Casa Jonico amb la barbacoa i el celler tradicional de pedra"
               className="rounded-2xl shadow-2xl w-full aspect-[4/5] object-cover"
               loading="lazy"
               fetchPriority="low"
