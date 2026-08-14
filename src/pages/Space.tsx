@@ -8,11 +8,10 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 const zonePhotos: Record<string, string[]> = {
   sala: [
-    '/p3/p31.webp', '/p3/p32.webp', '/p3/p33.webp', '/p3/p34.webp', '/p3/p35.webp',
-    '/p3/p38.webp', '/p3/p39.webp', '/p3/p310.webp', '/p3/p311.webp', '/p3/p313.webp',
+    '/p3/p321.webp', '/p3/p322.webp', '/p3/p323.webp', '/p3/p325.webp', '/p3/p324.webp',
   ],
   cocina: [
-    '/p3/p314.webp', '/p3/p315.webp', '/p3/p316.webp', '/p3/p317.webp',
+    '/p3/p314.webp', '/p3/p315.webp', '/p3/p318.webp', '/p3/p319.webp', '/p3/p320.webp',
   ],
   galfer: [
     '/p2/p21.webp', '/p2/p22.webp', '/p2/p29.webp', '/p2/p210.webp', '/p2/p211.webp', '/p2/p212.webp',
@@ -21,20 +20,25 @@ const zonePhotos: Record<string, string[]> = {
     '/p2/p26.webp', '/p2/p27.webp', '/p2/p28.webp',
   ],
   isard: [
-    '/p1/p13.webp', '/p1/p14.webp', '/p1/p15.webp', '/p1/p16.webp',
+    '/p1/p13.webp', '/p1/p14.webp', '/p1/p15.webp', '/p1/p16.webp', '/p1/p17.webp',
+  ],
+  altellSenglar: [
+    '/altres/altell-escales.webp', '/altres/altell1.webp', '/altres/altell2.webp',
   ],
   banys: [
     '/p2/p23.webp', '/p2/p24.webp', '/p2/p25.webp', '/p1/p11.webp', '/p3/p36.webp', '/p3/p37.webp',
   ],
   bodega: [
-    '/altres/p47.webp',
+    '/altres/garatge1.webp', '/altres/garatge2.webp', '/altres/garatge3.webp',
   ],
   patio: [
-    '/altres/p48.webp', '/altres/p49.webp', '/p2/p213.webp',
+    '/p2/p213.webp',
+    '/altres/entrada1.webp', '/altres/entrada2.webp', '/altres/vistes.webp',
+    '/altres/taula-fora.webp', '/altres/garatge4.webp', '/altres/fora-pati.webp',
   ],
 };
 
-const zoneOrder = ['sala', 'cocina', 'galfer', 'cabirol', 'isard', 'banys', 'bodega', 'patio'];
+const zoneOrder = ['sala', 'cocina', 'galfer', 'cabirol', 'isard', 'altellSenglar', 'banys', 'bodega', 'patio'];
 
 export default function Space() {
   const { t } = useLanguage();
@@ -84,7 +88,7 @@ export default function Space() {
       {/* Stats bar */}
       <div className="grid grid-cols-4 border-b border-[#ddd6c8] bg-[#f5f0e8]">
         {[
-          { num: 3, label: sp.stat1 },
+          { num: 4, label: sp.stat1 },
           { num: 3, label: sp.stat2 },
           { num: 8, label: sp.stat3 },
           { num: 3, label: sp.stat4 },
