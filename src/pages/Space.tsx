@@ -8,7 +8,8 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 const zonePhotos: Record<string, string[]> = {
   sala: [
-    '/p3/p321.webp', '/p3/p322.webp', '/p3/p323.webp', '/p3/p325.webp', '/p3/p324.webp',
+    '/p3/p31.webp', '/p3/p33.webp', '/p3/p34.webp', '/p3/p35.webp', '/p3/p311.webp', '/p3/p313.webp',
+    '/p3/p322.webp', '/p3/p323.webp', '/p3/p325.webp', '/p3/p324.webp', '/p3/p321.webp',
   ],
   cocina: [
     '/p3/p314.webp', '/p3/p315.webp', '/p3/p318.webp', '/p3/p319.webp', '/p3/p320.webp',
@@ -20,7 +21,7 @@ const zonePhotos: Record<string, string[]> = {
     '/p2/p26.webp', '/p2/p27.webp', '/p2/p28.webp',
   ],
   isard: [
-    '/p1/p13.webp', '/p1/p14.webp', '/p1/p15.webp', '/p1/p16.webp', '/p1/p17.webp',
+    '/p1/p13.webp', '/p1/p14.webp', '/p1/p15.webp', '/p1/p17.webp', '/p1/p16.webp',
   ],
   altellSenglar: [
     '/altres/altell-escales.webp', '/altres/altell1.webp', '/altres/altell2.webp',
@@ -29,10 +30,9 @@ const zonePhotos: Record<string, string[]> = {
     '/p2/p23.webp', '/p2/p24.webp', '/p2/p25.webp', '/p1/p11.webp', '/p3/p36.webp', '/p3/p37.webp',
   ],
   bodega: [
-    '/altres/garatge1.webp', '/altres/garatge2.webp', '/altres/garatge3.webp',
+    '/altres/garatge2.webp', '/altres/garatge1.webp', '/altres/garatge3.webp',
   ],
   patio: [
-    '/p2/p213.webp',
     '/altres/entrada1.webp', '/altres/entrada2.webp', '/altres/vistes.webp',
     '/altres/taula-fora.webp', '/altres/garatge4.webp', '/altres/fora-pati.webp',
   ],

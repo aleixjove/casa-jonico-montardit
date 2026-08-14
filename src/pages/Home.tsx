@@ -189,8 +189,8 @@ export default function Home() {
             className="relative"
           >
             <img
-              src="/altres/p47.webp"
-              alt="Sala interior de Casa Jonico amb la barbacoa i el celler tradicional de pedra"
+              src="/altres/vistes.webp"
+              alt="Vistes panoràmiques del Pirineu del Pallars Sobirà des de Casa Jonico"
               className="rounded-2xl shadow-2xl w-full aspect-[4/5] object-cover"
               loading="lazy"
               fetchPriority="low"
