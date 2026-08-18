@@ -54,7 +54,7 @@ export default function Contact() {
     { label: c.labelTel,      value: '+34 607 83 03 81',           href: 'tel:+34607830381',           icon: Phone,          whatsapp: false },
     { label: c.labelEmail,    value: 'reserves@casajonico.com',     href: 'mailto:reserves@casajonico.com', icon: Mail,         whatsapp: false },
     { label: c.labelDir,      value: c.dirValue,                    href: undefined,                    icon: MapPin,         whatsapp: false },
-    { label: c.labelWhatsapp, value: c.whatsappValue,               href: 'https://wa.me/34607830381',  icon: MessageCircle,  whatsapp: true  },
+    { label: c.labelWhatsapp, value: c.whatsappValue,               href: `https://wa.me/34607830381?text=${encodeURIComponent(t.whatsappMessage)}`, icon: MessageCircle,  whatsapp: true  },
   ];
 
   return (

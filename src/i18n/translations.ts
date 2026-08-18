@@ -341,6 +341,7 @@ export const translations = {
       quoteDesc: 'Ocho personas, tres habitaciones y todo el Pirineo por delante. Reserva Casa Jonico y disfrutad en compañía.',
     },
     descobreixMes: { title: 'Descubre más', card1: 'Casa rural en el Pallars Sobirà', card2: 'Ideal para grupos y familias' },
+    whatsappMessage: '¡Hola! Quería solicitar más información sobre Casa Jonico.',
     promo: {
       title: 'de descuento reservando directamente',
       badge: 'Reserva directa · Oferta exclusiva',
@@ -690,6 +691,7 @@ export const translations = {
       quoteDesc: "Vuit persones, tres habitacions i tot el Pirineu al davant. Reserveu Casa Jonico i gaudiu en companyia.",
     },
     descobreixMes: { title: 'Descobreix més', card1: 'Casa rural al Pallars Sobirà', card2: 'Ideal per a grups i famílies' },
+    whatsappMessage: 'Hola! Voldria demanar més informació sobre Casa Jonico.',
     promo: {
       title: 'de descompte reservant directament',
       badge: 'Reserva directa · Oferta exclusiva',
@@ -1039,6 +1041,7 @@ export const translations = {
       quoteDesc: 'Eight people, three bedrooms and the whole Pyrenees ahead. Book Casa Jonico and enjoy together.',
     },
     descobreixMes: { title: 'Discover more', card1: 'Rural house in Pallars Sobirà', card2: 'Ideal for groups & families' },
+    whatsappMessage: "Hello! I'd like to request more information about Casa Jonico.",
     promo: {
       title: 'discount booking directly with us',
       badge: 'Direct booking · Exclusive offer',

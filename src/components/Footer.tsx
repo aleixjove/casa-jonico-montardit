@@ -35,9 +35,9 @@ export default function Footer() {
             >
               <Instagram size={15} strokeWidth={1.5} />
             </a>
-            <a 
-              href="https://wa.me/34607830381" 
-              target="_blank" 
+            <a
+              href={`https://wa.me/34607830381?text=${encodeURIComponent(t.whatsappMessage)}`}
+              target="_blank"
               rel="noopener noreferrer"
               className="w-[34px] h-[34px] border border-secondary/20 rounded-full flex items-center justify-center text-[#a0b4a0] transition-all hover:border-[#cd9a55] hover:text-secondary hover:bg-[#cd9a55]/15"
               title="WhatsApp"

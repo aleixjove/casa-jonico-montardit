@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChevronUp } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 function WhatsAppIcon() {
   return (
@@ -11,6 +12,8 @@ function WhatsAppIcon() {
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
+  const { t } = useLanguage();
+  const waHref = `https://wa.me/34607830381?text=${encodeURIComponent(t.whatsappMessage)}`;
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 300);
@@ -21,7 +24,7 @@ export default function ScrollToTop() {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-2 items-center">
       <a
-        href="https://wa.me/34607830381"
+        href={waHref}
         target="_blank"
         rel="noopener noreferrer"
         className="w-10 h-10 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#1ebe57] transition-colors"
