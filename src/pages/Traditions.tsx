@@ -4,13 +4,9 @@ import { cn } from '../lib/utils';
 import { useLanguage } from '../i18n/LanguageContext';
 import ScrollToTop from '../components/ScrollToTop';
 
-const traditionImages: Record<string, string> = {
-  falles: 'https://static.wixstatic.com/media/fb9e9f_3fb6edfdfa0543cca1de158588afa850~mv2.png',
-  pagesa: 'https://static.wixstatic.com/media/fb9e9f_f157f61a6736440eabfd776e93f63e01~mv2.png',
-  aplecs: 'https://static.wixstatic.com/media/fb9e9f_0a3dca8c7c254c33a1cabcad4b101349~mv2.png',
-  carnaval: 'https://static.wixstatic.com/media/fb9e9f_bedaaf452bf34265ab73ec2442b980e3~mv2.png',
-  llegendes: 'https://static.wixstatic.com/media/fb9e9f_d94e9a8c74954eaba2162f9001d054b6~mv2.png',
-};
+// PLACEHOLDERS: fotos dels llocs d'interès pendents d'assignar.
+// Claus esperades (futures): botigues-salas, ecomuseu-aneu, salines-gerri, parc-alt-pirineu, tor
+const traditionImages: Record<string, string> = {};
 
 export default function Traditions() {
   const { t } = useLanguage();
@@ -79,12 +75,16 @@ export default function Traditions() {
           >
             {/* Image Side */}
             <div className="md:w-[42%] min-h-[300px] md:min-h-[450px] relative overflow-hidden">
-              <img
-                src={traditionImages[tradition.id]}
-                alt={tradition.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                referrerPolicy="no-referrer"
-              />
+              {traditionImages[tradition.id]
+                ? <img
+                    src={traditionImages[tradition.id]}
+                    alt={tradition.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                  />
+                : <div className="absolute inset-0 bg-[#c8c0b0] flex items-center justify-center text-white/50 text-4xl">📸</div>
+              }
             </div>
 
             {/* Content Side */}
