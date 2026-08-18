@@ -4,12 +4,13 @@ import { cn } from '../lib/utils';
 import { useLanguage } from '../i18n/LanguageContext';
 import ScrollToTop from '../components/ScrollToTop';
 
-// Fotos dels llocs d'interès. 'tor' encara pendent d'assignar (mostrarà placeholder).
+// Fotos dels llocs d'interès.
 const traditionImages: Record<string, string> = {
   'botigues-salas': '/altres/salas.webp',
   'ecomuseu-aneu': '/altres/ecomuseu.webp',
   'salines-gerri': '/altres/salines.webp',
   'parc-alt-pirineu': '/altres/pnap.webp',
+  'tor': '/tor.webp',
 };
 
 export default function Traditions() {
