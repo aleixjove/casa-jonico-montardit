@@ -29,6 +29,7 @@ export default function Navbar() {
       submenu: [
         { name: t.nav.actividades, path: '/actividades' },
         { name: t.nav.tradiciones, path: '/tradiciones' },
+        { name: t.nav.gastronomia, path: '/gastronomia' },
       ]
     },
     { name: t.nav.testimonios, path: '/testimonios' },

@@ -19,6 +19,7 @@ import Refund from './pages/legal/Refund';
 import Accessibility from './pages/legal/Accessibility';
 import CasaRuralPallars from './pages/CasaRuralPallars';
 import CasaRuralGruposFamilias from './pages/CasaRuralGruposFamilias';
+import Gastronomia from './pages/Gastronomia';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -44,6 +45,7 @@ export default function App() {
             <Route path="/servicios" element={<Services />} />
             <Route path="/actividades" element={<Activities />} />
             <Route path="/tradiciones" element={<Traditions />} />
+            <Route path="/gastronomia" element={<Gastronomia />} />
             <Route path="/reservas" element={<Pricing />} />
             <Route path="/faqs" element={<Faqs />} />
             <Route path="/testimonios" element={<Testimonials />} />
