@@ -200,6 +200,7 @@ export const translations = {
       desc: 'Gracias a las familias y grupos que eligen Casa Jonico para sus momentos especiales. Estas son algunas de sus vivencias en el Pallars.',
       filterLabel: 'Filtrar por:',
       platformAll: 'Todas',
+      reviewsLabel: 'reseñas',
     },
     traditions: {
       title1: 'Lugares de Interés',
@@ -550,6 +551,7 @@ export const translations = {
       desc: "Gràcies a les famílies i grups que trien Casa Jonico per als seus moments especials. Aquestes són algunes de les seves vivències al Pallars.",
       filterLabel: 'Filtrar per:',
       platformAll: 'Totes',
+      reviewsLabel: 'ressenyes',
     },
     traditions: {
       title1: "Llocs d'Interès",
@@ -900,6 +902,7 @@ export const translations = {
       desc: 'Thank you to all the families and groups who choose Casa Jonico for their special moments. Here are some of their experiences in the Pallars.',
       filterLabel: 'Filter by:',
       platformAll: 'All',
+      reviewsLabel: 'reviews',
     },
     traditions: {
       title1: 'Places of Interest',
