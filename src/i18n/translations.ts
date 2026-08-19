@@ -76,7 +76,7 @@ export const translations = {
       ],
       nearby: [
         { name: "Parc Nacional d'Aigüestortes", distance: '38,7 km · 42 min', desc: 'Paisajes únicos, lagos de alta montaña y senderismo de primer nivel.' },
-        { name: 'Baqueira-Beret', distance: '51,5 km · 53 min', desc: 'Una de las estaciones de esquí más grandes y prestigiosas de España.' },
+        { name: 'Baqueira-Beret', distance: '64,1 km · 1h 24 min', desc: 'Una de las estaciones de esquí más grandes y prestigiosas de España.' },
         { name: 'Portainé', distance: '29,3 km · 45 min', desc: 'Estación de esquí familiar con pistas para todos los niveles.' },
       ],
     },
@@ -208,11 +208,11 @@ export const translations = {
       quoteTitle: '"Cada lugar, una historia por descubrir"',
       quoteDesc: 'Desde los comercios centenarios de Salàs hasta las cumbres de tres mil metros, el Pallars Sobirà te ofrece un mosaico único de patrimonio, naturaleza y memoria viva.',
       items: [
-        { id: 'botigues-salas', tag: 'Salàs · Comercio antiguo', title: 'Botigues de Salàs', desc: 'Conjunto de tiendas antiguas del siglo XX conservadas en Salàs de Pallars (barbería, farmacia, estanco, mercería, ultramarinos), donde se realizan visitas guiadas que explican la vida cotidiana y el comercio de antaño en el pueblo. Un recorrido muy recomendable en familia, por el casco antiguo medieval de la villa.', dark: false },
-        { id: 'ecomuseu-aneu', tag: "Valls d'Àneu · Creu de Sant Jordi", title: "Ecomuseu de les Valls d'Àneu", desc: "Museo etnográfico único, repartido por varios pueblos de las Valls d'Àneu, dedicado a preservar la vida tradicional pirenaica de finales del siglo XIX. Combina patrimonio monumental, natural y etnográfico, y fue reconocido con la Creu de Sant Jordi en 2020. Una forma diferente de descubrir el alma del Pallars.", dark: true },
-        { id: 'salines-gerri', tag: 'Gerri de la Sal · Mil años de historia', title: 'Salinas de Gerri de la Sal', desc: 'Pueblo con más de mil años de historia salinera documentada desde el siglo IX. Se pueden visitar las salinas originales y el Real Alfolí, el antiguo almacén donde el agua más salada que la del Mediterráneo se transformaba en el preciado "oro blanco" medieval. El casco conserva también un puente románico y el monasterio de Santa Maria.', dark: false },
-        { id: 'parc-alt-pirineu', tag: 'Alt Pirineu · Parque más grande de Cataluña', title: "Parc Natural de l'Alt Pirineu", desc: "El parque natural más grande de Cataluña, con casi 70.000 hectáreas y el techo del país: la Pica d'Estats, de 3.143 metros. Refugio de fauna emblemática como el oso pardo, el quebrantahuesos, el urogallo y los rebecos, y hogar de lagos glaciares como el Certascan. Un paraíso para los amantes del senderismo y de la naturaleza salvaje.", dark: true },
-        { id: 'tor', tag: 'Tor · Frontera con Andorra', title: 'Tor', desc: 'Uno de los pueblos más aislados y singulares del Pirineo catalán, tocando la frontera con Andorra y aún hoy incomunicado por la nieve en invierno. De origen medieval, se hizo conocido por la disputa histórica sobre la montaña comunal, inmortalizada en el libro y documental "Tor, tretze cases i tres morts" de Carles Porta. Un rincón auténtico para los amantes de la montaña y la historia local.', dark: false },
+        { id: 'botigues-salas', tag: 'Salàs · Comercio antiguo', title: 'Botigues de Salàs', desc: 'Conjunto de tiendas antiguas del siglo XX conservadas en Salàs de Pallars (barbería, farmacia, estanco, mercería, ultramarinos), donde se realizan visitas guiadas que explican la vida cotidiana y el comercio de antaño en el pueblo. Un recorrido muy recomendable en familia, por el casco antiguo medieval de la villa.', dark: false, linkText: 'Más información y reservas →' },
+        { id: 'ecomuseu-aneu', tag: "Valls d'Àneu · Creu de Sant Jordi", title: "Ecomuseu de les Valls d'Àneu", desc: "Museo etnográfico único, repartido por varios pueblos de las Valls d'Àneu, dedicado a preservar la vida tradicional pirenaica de finales del siglo XIX. Combina patrimonio monumental, natural y etnográfico, y fue reconocido con la Creu de Sant Jordi en 2020. Una forma diferente de descubrir el alma del Pallars.", dark: true, linkText: 'Descubre el Ecomuseu →' },
+        { id: 'salines-gerri', tag: 'Gerri de la Sal · Mil años de historia', title: 'Salinas de Gerri de la Sal', desc: 'Pueblo con más de mil años de historia salinera documentada desde el siglo IX. Se pueden visitar las salinas originales y el Real Alfolí, el antiguo almacén donde el agua más salada que la del Mediterráneo se transformaba en el preciado "oro blanco" medieval. El casco conserva también un puente románico y el monasterio de Santa Maria.', dark: false, linkText: 'Reserva tu visita →' },
+        { id: 'parc-alt-pirineu', tag: 'Alt Pirineu · Parque más grande de Cataluña', title: "Parc Natural de l'Alt Pirineu", desc: "El parque natural más grande de Cataluña, con casi 70.000 hectáreas y el techo del país: la Pica d'Estats, de 3.143 metros. Refugio de fauna emblemática como el oso pardo, el quebrantahuesos, el urogallo y los rebecos, y hogar de lagos glaciares como el Certascan. Un paraíso para los amantes del senderismo y de la naturaleza salvaje.", dark: true, linkText: 'Información del parque →', linkText2: 'Taxi para el Estany de Sant Maurici →' },
+        { id: 'tor', tag: 'Tor · Frontera con Andorra', title: 'Tor', desc: 'Uno de los pueblos más aislados y singulares del Pirineo catalán, tocando la frontera con Andorra y aún hoy incomunicado por la nieve en invierno. De origen medieval, se hizo conocido por la disputa histórica sobre la montaña comunal, inmortalizada en el libro y documental "Tor, tretze cases i tres morts" de Carles Porta. Un rincón auténtico para los amantes de la montaña y la historia local.', dark: false, linkText: 'Lee la historia completa →' },
       ],
     },
     activities: {
@@ -224,8 +224,8 @@ export const translations = {
       items: [
         { tag: 'Invierno', title: 'Esquí', imgAlt: 'Esquí en el Pirineo — estación de Portainé a 29 km de Casa Jonico', desc: "El Pirineo catalán es uno de los destinos de esquí más completos de la Península Ibérica.", subTitle: 'Estaciones cercanas', items: [
           { name: 'Portainé', detail: '29,3 km · 45 min. Estación familiar con pistas para todos los niveles.' },
-          { name: 'Espot Esquí', detail: "18 km · 25 min. Estación del Pallars Sobirà integrada en el entorno del Parc Nacional d'Aigüestortes." },
-          { name: 'Baqueira-Beret', detail: '51,5 km · 53 min. Una de las estaciones más grandes y prestigiosas de España, con más de 160 km de pistas.' },
+          { name: 'Espot Esquí', detail: "38,8 km · 48 min. Estación del Pallars Sobirà integrada en el entorno del Parc Nacional d'Aigüestortes." },
+          { name: 'Baqueira-Beret', detail: '64,1 km · 1h 24 min. Una de las estaciones más grandes y prestigiosas de España, con más de 160 km de pistas.' },
         ]},
         { tag: 'Todo el año', title: 'Rafting y Kayak', desc: 'Sort, a tan solo 4,7 km de Casa Jonico, es conocida mundialmente como la capital del piragüismo y los deportes de agua en España.', subTitle: 'Empresas en Sort', items: [
           { name: 'La Rafting Company', detail: 'Actividades de aventura con la máxima calidad y seguridad.' },
@@ -301,7 +301,7 @@ export const translations = {
         { q: '¿Cuántas personas caben en la casa?', a: 'La casa tiene capacidad para un <strong>máximo de 8 personas</strong> en 4 habitaciones: Gall Fer, Cabirol, Isard y Altillo Senglar.' },
         { q: '¿Hay aparcamiento disponible?', a: 'Sí, <strong>aparcamiento privado gratuito</strong> a 200 m de la casa.' },
         { q: '¿Por qué es mejor reservar directamente?', a: 'Obtienes un <strong>15% de descuento</strong> respecto a Booking o Airbnb, trato directo y confirmación en menos de 24 horas.' },
-        { q: '¿A qué distancia están las estaciones de esquí?', a: 'Las estaciones más cercanas son <strong>Espot Esquí (18 km, 25 min)</strong>, <strong>Portainé (29 km, 45 min)</strong> y <strong>Baqueira-Beret (51 km, 53 min)</strong>. Cubren todos los niveles, desde familiar hasta prestigio internacional.' },
+        { q: '¿A qué distancia están las estaciones de esquí?', a: 'Las estaciones más cercanas son <strong>Portainé (29 km, 45 min)</strong>, <strong>Espot Esquí (38,8 km, 48 min)</strong> y <strong>Baqueira-Beret (64,1 km, 1h 24 min)</strong>. Cubren todos los niveles, desde familiar hasta prestigio internacional.' },
       ],
     },
     casaRuralPallars: {
@@ -426,7 +426,7 @@ export const translations = {
       ],
       nearby: [
         { name: "Parc Nacional d'Aigüestortes", distance: '38,7 km · 42 min', desc: "Paisatges únics, llacs d'alta muntanya i senderisme de primer nivell." },
-        { name: 'Baqueira-Beret', distance: '51,5 km · 53 min', desc: "Una de les estacions d'esquí més grans i prestigioses d'Espanya." },
+        { name: 'Baqueira-Beret', distance: '64,1 km · 1h 24 min', desc: "Una de les estacions d'esquí més grans i prestigioses d'Espanya." },
         { name: 'Portainé', distance: '29,3 km · 45 min', desc: "Estació d'esquí familiar amb pistes per a tots els nivells." },
       ],
     },
@@ -558,11 +558,11 @@ export const translations = {
       quoteTitle: '"Cada lloc, una història per descobrir"',
       quoteDesc: "Des dels comerços centenaris de Salàs fins als cims de tres mil metres, el Pallars Sobirà t'ofereix un mosaic únic de patrimoni, natura i memòria viva.",
       items: [
-        { id: 'botigues-salas', tag: 'Salàs · Comerç antic', title: 'Botigues de Salàs', desc: "Conjunt de botigues antigues del segle XX conservades a Salàs de Pallars (barberia, farmàcia, estanc, merceria, ultramarins), on es poden fer visites guiades que expliquen la vida quotidiana i el comerç d'antany al poble. Un recorregut molt recomanat en família, pel casc antic medieval de la vila.", dark: false },
-        { id: 'ecomuseu-aneu', tag: "Valls d'Àneu · Creu de Sant Jordi", title: "Ecomuseu de les Valls d'Àneu", desc: "Museu etnogràfic únic, escampat per diversos pobles de les Valls d'Àneu, dedicat a preservar la vida tradicional pirinenca de finals del segle XIX. Combina patrimoni monumental, natural i etnogràfic, i va ser reconegut amb la Creu de Sant Jordi el 2020. Una manera diferent de descobrir l'ànima del Pallars.", dark: true },
-        { id: 'salines-gerri', tag: "Gerri de la Sal · Mil anys d'història", title: 'Salines de Gerri de la Sal', desc: 'Poble amb més de mil anys d\'història salinera documentada des del segle IX. Es poden visitar les salines originals i el Real Alfolí, l\'antic magatzem on l\'aigua més salada que la del Mediterrani es transformava en el preuat "or blanc" medieval. El nucli conserva també pont romànic i el monestir de Santa Maria.', dark: false },
-        { id: 'parc-alt-pirineu', tag: 'Alt Pirineu · Parc més gran de Catalunya', title: "Parc Natural de l'Alt Pirineu", desc: "El parc natural més gran de Catalunya, amb quasi 70.000 hectàrees i el sostre del país: la Pica d'Estats, de 3.143 metres. Refugi de fauna emblemàtica com l'ós bru, el trencalòs, el gall fer i els isards, i llar d'estanys glacials com el Certascan. Un paradís per als amants del senderisme i de la natura salvatge.", dark: true },
-        { id: 'tor', tag: 'Tor · Frontera amb Andorra', title: 'Tor', desc: 'Un dels pobles més aïllats i singulars del Pirineu català, tocant la frontera amb Andorra i encara avui incomunicat per la neu a l\'hivern. D\'origen medieval, es va fer conegut arreu per la disputa històrica sobre la muntanya comunal, immortalitzada al llibre i documental "Tor, tretze cases i tres morts" de Carles Porta. Un racó autèntic per als amants de la muntanya i la història local.', dark: false },
+        { id: 'botigues-salas', tag: 'Salàs · Comerç antic', title: 'Botigues de Salàs', desc: "Conjunt de botigues antigues del segle XX conservades a Salàs de Pallars (barberia, farmàcia, estanc, merceria, ultramarins), on es poden fer visites guiades que expliquen la vida quotidiana i el comerç d'antany al poble. Un recorregut molt recomanat en família, pel casc antic medieval de la vila.", dark: false, linkText: 'Més informació i reserves →' },
+        { id: 'ecomuseu-aneu', tag: "Valls d'Àneu · Creu de Sant Jordi", title: "Ecomuseu de les Valls d'Àneu", desc: "Museu etnogràfic únic, escampat per diversos pobles de les Valls d'Àneu, dedicat a preservar la vida tradicional pirinenca de finals del segle XIX. Combina patrimoni monumental, natural i etnogràfic, i va ser reconegut amb la Creu de Sant Jordi el 2020. Una manera diferent de descobrir l'ànima del Pallars.", dark: true, linkText: "Descobreix l'Ecomuseu →" },
+        { id: 'salines-gerri', tag: "Gerri de la Sal · Mil anys d'història", title: 'Salines de Gerri de la Sal', desc: 'Poble amb més de mil anys d\'història salinera documentada des del segle IX. Es poden visitar les salines originals i el Real Alfolí, l\'antic magatzem on l\'aigua més salada que la del Mediterrani es transformava en el preuat "or blanc" medieval. El nucli conserva també pont romànic i el monestir de Santa Maria.', dark: false, linkText: 'Reserva la teva visita →' },
+        { id: 'parc-alt-pirineu', tag: 'Alt Pirineu · Parc més gran de Catalunya', title: "Parc Natural de l'Alt Pirineu", desc: "El parc natural més gran de Catalunya, amb quasi 70.000 hectàrees i el sostre del país: la Pica d'Estats, de 3.143 metres. Refugi de fauna emblemàtica com l'ós bru, el trencalòs, el gall fer i els isards, i llar d'estanys glacials com el Certascan. Un paradís per als amants del senderisme i de la natura salvatge.", dark: true, linkText: 'Informació del parc →', linkText2: "Taxi per a l'Estany de Sant Maurici →" },
+        { id: 'tor', tag: 'Tor · Frontera amb Andorra', title: 'Tor', desc: 'Un dels pobles més aïllats i singulars del Pirineu català, tocant la frontera amb Andorra i encara avui incomunicat per la neu a l\'hivern. D\'origen medieval, es va fer conegut arreu per la disputa històrica sobre la muntanya comunal, immortalitzada al llibre i documental "Tor, tretze cases i tres morts" de Carles Porta. Un racó autèntic per als amants de la muntanya i la història local.', dark: false, linkText: 'Llegeix la història completa →' },
       ],
     },
     activities: {
@@ -574,8 +574,8 @@ export const translations = {
       items: [
         { tag: 'Hivern', title: 'Esquí', imgAlt: 'Esquí al Pirineu — estació de Portainé a 29 km de Casa Jonico', desc: "El Pirineu català és un dels destins d'esquí més complets de la Península Ibèrica.", subTitle: 'Estacions properes', items: [
           { name: 'Portainé', detail: '29,3 km · 45 min. Estació familiar amb pistes per a tots els nivells.' },
-          { name: 'Espot Esquí', detail: "18 km · 25 min. Integrada en l'entorn del Parc Nacional d'Aigüestortes." },
-          { name: 'Baqueira-Beret', detail: "51,5 km · 53 min. Una de les estacions més grans d'Espanya, amb més de 160 km de pistes." },
+          { name: 'Espot Esquí', detail: "38,8 km · 48 min. Integrada en l'entorn del Parc Nacional d'Aigüestortes." },
+          { name: 'Baqueira-Beret', detail: "64,1 km · 1h 24 min. Una de les estacions més grans d'Espanya, amb més de 160 km de pistes." },
         ]},
         { tag: "Tot l'any", title: 'Ràfting i Caiac', desc: "Sort, a tan sols 4,7 km de Casa Jonico, és la capital del piragüisme i els esports d'aigua a Espanya.", subTitle: 'Empreses a Sort', items: [
           { name: 'La Rafting Company', detail: "Activitats d'aventura amb la màxima qualitat i seguretat." },
@@ -651,7 +651,7 @@ export const translations = {
         { q: 'Quantes persones caben a la casa?', a: "La casa té capacitat per a un <strong>màxim de 8 persones</strong> en 4 habitacions: Gall Fer, Cabirol, Isard i Altell Senglar." },
         { q: "Hi ha aparcament disponible?", a: "Sí, <strong>aparcament privat gratuït</strong> a 200 m de la casa." },
         { q: 'Per què és millor reservar directament?', a: "Obtens un <strong>15% de descompte</strong> respecte a Booking o Airbnb, tracte directe i confirmació en menys de 24 hores." },
-        { q: "A quina distància hi ha les estacions d'esquí?", a: "Les estacions més properes són <strong>Espot Esquí (18 km, 25 min)</strong>, <strong>Portainé (29 km, 45 min)</strong> i <strong>Baqueira-Beret (51 km, 53 min)</strong>. Cobreixen tots els nivells, des del familiar fins al prestigi internacional." },
+        { q: "A quina distància hi ha les estacions d'esquí?", a: "Les estacions més properes són <strong>Portainé (29 km, 45 min)</strong>, <strong>Espot Esquí (38,8 km, 48 min)</strong> i <strong>Baqueira-Beret (64,1 km, 1h 24 min)</strong>. Cobreixen tots els nivells, des del familiar fins al prestigi internacional." },
       ],
     },
     casaRuralPallars: {
@@ -776,7 +776,7 @@ export const translations = {
       ],
       nearby: [
         { name: "Aigüestortes National Park", distance: '38.7 km · 42 min', desc: 'Unique landscapes, high mountain lakes and top-level hiking.' },
-        { name: 'Baqueira-Beret', distance: '51.5 km · 53 min', desc: 'One of the largest and most prestigious ski resorts in Spain.' },
+        { name: 'Baqueira-Beret', distance: '64.1 km · 1h 24 min', desc: 'One of the largest and most prestigious ski resorts in Spain.' },
         { name: 'Portainé', distance: '29.3 km · 45 min', desc: 'Family ski resort with slopes for all levels.' },
       ],
     },
@@ -908,11 +908,11 @@ export const translations = {
       quoteTitle: '"Every place, a story to discover"',
       quoteDesc: 'From the century-old shops of Salàs to the three-thousand-metre peaks, the Pallars Sobirà offers a unique tapestry of heritage, nature and living memory.',
       items: [
-        { id: 'botigues-salas', tag: 'Salàs · Old trade', title: 'Botigues de Salàs', desc: "A collection of early 20th-century shops preserved in Salàs de Pallars (barber shop, pharmacy, tobacconist, haberdashery, grocery), offering guided tours that bring to life everyday village commerce of the past. A highly recommended family visit through the town's medieval old quarter.", dark: false },
-        { id: 'ecomuseu-aneu', tag: "Valls d'Àneu · Creu de Sant Jordi", title: "Ecomuseum of the Valls d'Àneu", desc: "A unique open-form ethnographic museum spread across several villages of the Valls d'Àneu, dedicated to preserving late-19th-century Pyrenean rural life. It weaves together architectural, natural and ethnographic heritage, and was awarded the Creu de Sant Jordi in 2020. A different way to discover the soul of the Pallars.", dark: true },
-        { id: 'salines-gerri', tag: 'Gerri de la Sal · A thousand years of history', title: 'Salt Pans of Gerri de la Sal', desc: 'A village with over a thousand years of salt-making history documented since the 9th century. You can visit the original salt pans and the Real Alfolí, the medieval salt warehouse where water saltier than the Mediterranean was turned into precious "white gold". The village also preserves a Romanesque bridge and the monastery of Santa Maria.', dark: false },
-        { id: 'parc-alt-pirineu', tag: "Alt Pirineu · Catalonia's largest park", title: 'Alt Pirineu Natural Park', desc: "The largest natural park in Catalonia, spanning nearly 70,000 hectares and home to the country's highest peak, Pica d'Estats (3,143 m). A refuge for iconic wildlife — brown bears, bearded vultures, capercaillie and chamois — and to glacial lakes such as Certascan. A paradise for hikers and wild-nature lovers.", dark: true },
-        { id: 'tor', tag: 'Tor · Border with Andorra', title: 'Tor', desc: 'One of the most remote and singular villages in the Catalan Pyrenees, right on the Andorran border and still cut off by snow every winter. Of medieval origin, it became widely known through the historic dispute over the common mountain, immortalised in the book and documentary "Tor, tretze cases i tres morts" by Carles Porta. An authentic corner for mountain lovers and local-history enthusiasts.', dark: false },
+        { id: 'botigues-salas', tag: 'Salàs · Old trade', title: 'Botigues de Salàs', desc: "A collection of early 20th-century shops preserved in Salàs de Pallars (barber shop, pharmacy, tobacconist, haberdashery, grocery), offering guided tours that bring to life everyday village commerce of the past. A highly recommended family visit through the town's medieval old quarter.", dark: false, linkText: 'More information and bookings →' },
+        { id: 'ecomuseu-aneu', tag: "Valls d'Àneu · Creu de Sant Jordi", title: "Ecomuseum of the Valls d'Àneu", desc: "A unique open-form ethnographic museum spread across several villages of the Valls d'Àneu, dedicated to preserving late-19th-century Pyrenean rural life. It weaves together architectural, natural and ethnographic heritage, and was awarded the Creu de Sant Jordi in 2020. A different way to discover the soul of the Pallars.", dark: true, linkText: 'Discover the Ecomuseum →' },
+        { id: 'salines-gerri', tag: 'Gerri de la Sal · A thousand years of history', title: 'Salt Pans of Gerri de la Sal', desc: 'A village with over a thousand years of salt-making history documented since the 9th century. You can visit the original salt pans and the Real Alfolí, the medieval salt warehouse where water saltier than the Mediterranean was turned into precious "white gold". The village also preserves a Romanesque bridge and the monastery of Santa Maria.', dark: false, linkText: 'Book your visit →' },
+        { id: 'parc-alt-pirineu', tag: "Alt Pirineu · Catalonia's largest park", title: 'Alt Pirineu Natural Park', desc: "The largest natural park in Catalonia, spanning nearly 70,000 hectares and home to the country's highest peak, Pica d'Estats (3,143 m). A refuge for iconic wildlife — brown bears, bearded vultures, capercaillie and chamois — and to glacial lakes such as Certascan. A paradise for hikers and wild-nature lovers.", dark: true, linkText: 'Park information →', linkText2: 'Taxi to Estany de Sant Maurici →' },
+        { id: 'tor', tag: 'Tor · Border with Andorra', title: 'Tor', desc: 'One of the most remote and singular villages in the Catalan Pyrenees, right on the Andorran border and still cut off by snow every winter. Of medieval origin, it became widely known through the historic dispute over the common mountain, immortalised in the book and documentary "Tor, tretze cases i tres morts" by Carles Porta. An authentic corner for mountain lovers and local-history enthusiasts.', dark: false, linkText: 'Read the full story →' },
       ],
     },
     activities: {
@@ -924,8 +924,8 @@ export const translations = {
       items: [
         { tag: 'Winter', title: 'Skiing', imgAlt: 'Skiing in the Pyrenees — Portainé resort 29 km from Casa Jonico', desc: 'The Catalan Pyrenees is one of the most complete ski destinations on the Iberian Peninsula.', subTitle: 'Nearby resorts', items: [
           { name: 'Portainé', detail: '29.3 km · 45 min. Family resort with slopes for all levels.' },
-          { name: 'Espot Esquí', detail: "18 km · 25 min. Integrated into the Aigüestortes National Park." },
-          { name: 'Baqueira-Beret', detail: '51.5 km · 53 min. Over 160 km of slopes.' },
+          { name: 'Espot Esquí', detail: "38,8 km · 48 min. Integrated into the Aigüestortes National Park." },
+          { name: 'Baqueira-Beret', detail: '64.1 km · 1h 24 min. Over 160 km of slopes.' },
         ]},
         { tag: 'All year round', title: 'Rafting & Kayaking', desc: 'Sort, just 4.7 km away, is world-renowned as the capital of canoeing and water sports in Spain.', subTitle: 'Companies in Sort', items: [
           { name: 'La Rafting Company', detail: 'Adventure activities with the highest quality and safety.' },
@@ -1001,7 +1001,7 @@ export const translations = {
         { q: 'How many people can the house accommodate?', a: 'A <strong>maximum of 8 people</strong> across 4 bedrooms: Gall Fer, Cabirol, Isard and Senglar Loft.' },
         { q: 'Is parking available?', a: 'Yes, <strong>free private parking</strong> 200 m from the house.' },
         { q: 'Why is it better to book directly?', a: 'You get a <strong>15% discount</strong> vs Booking or Airbnb, plus direct owner contact.' },
-        { q: 'How far are the ski resorts?', a: 'The closest resorts are <strong>Espot Esquí (18 km, 25 min)</strong>, <strong>Portainé (29 km, 45 min)</strong> and <strong>Baqueira-Beret (51 km, 53 min)</strong>. They cover all levels, from family-friendly to internationally acclaimed.' },
+        { q: 'How far are the ski resorts?', a: 'The closest resorts are <strong>Portainé (29 km, 45 min)</strong>, <strong>Espot Esquí (38.8 km, 48 min)</strong> and <strong>Baqueira-Beret (64.1 km, 1h 24 min)</strong>. They cover all levels, from family-friendly to internationally acclaimed.' },
       ],
     },
     casaRuralPallars: {

@@ -13,6 +13,18 @@ const traditionImages: Record<string, string> = {
   'tor': '/tor.webp',
 };
 
+// Enllaços externs per lloc. Alguns tenen 2 (ex: parc-alt-pirineu + taxi Estany Sant Maurici).
+const traditionLinks: Record<string, string[]> = {
+  'botigues-salas': ['https://botiguesmuseusalas.cat/'],
+  'ecomuseu-aneu': ['https://www.ecomuseu.com/'],
+  'salines-gerri': ['https://museudegerri.cat/visita-a-les-salines/'],
+  'parc-alt-pirineu': [
+    'https://parcsnaturals.gencat.cat/ca/xarxa-de-parcs/alt-pirineu/inici/index.html',
+    'https://taxisespot.com/ca/',
+  ],
+  'tor': ['https://www.traveler.es/articulos/tor-la-montana-maldita-de-los-pirineos'],
+};
+
 export default function Traditions() {
   const { t } = useLanguage();
   const tr = t.traditions;
@@ -120,6 +132,38 @@ export default function Traditions() {
               )}>
                 {tradition.desc}
               </p>
+
+              {traditionLinks[tradition.id]?.[0] && (
+                <a
+                  href={traditionLinks[tradition.id][0]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    "inline-flex items-center gap-1 mt-6 text-sm font-medium tracking-wide transition-colors self-start border-b pb-0.5",
+                    tradition.dark
+                      ? "text-[#d4a05a] border-[#d4a05a]/40 hover:text-[#f5f0e8] hover:border-[#f5f0e8]"
+                      : "text-[#b07d3a] border-[#b07d3a]/40 hover:text-[#2d4a2d] hover:border-[#2d4a2d]"
+                  )}
+                >
+                  {tradition.linkText}
+                </a>
+              )}
+
+              {traditionLinks[tradition.id]?.[1] && 'linkText2' in tradition && tradition.linkText2 && (
+                <a
+                  href={traditionLinks[tradition.id][1]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    "inline-flex items-center gap-1 mt-3 text-xs font-light tracking-wide transition-colors self-start",
+                    tradition.dark
+                      ? "text-[#a8b8a8] hover:text-[#d4a05a]"
+                      : "text-[#7a7a6a] hover:text-[#b07d3a]"
+                  )}
+                >
+                  {tradition.linkText2}
+                </a>
+              )}
             </div>
           </motion.div>
         ))}
