@@ -6,6 +6,7 @@ import ScrollToTop from '../components/ScrollToTop';
 
 // Fotos dels llocs d'interès.
 const traditionImages: Record<string, string> = {
+  'aiguestortes-santmaurici': '/altres/santmaurici.webp',
   'botigues-salas': '/altres/salas.webp',
   'ecomuseu-aneu': '/altres/ecomuseu.webp',
   'salines-gerri': '/altres/salines.webp',
@@ -13,15 +14,17 @@ const traditionImages: Record<string, string> = {
   'tor': '/tor.webp',
 };
 
-// Enllaços externs per lloc. Alguns tenen 2 (ex: parc-alt-pirineu + taxi Estany Sant Maurici).
+// Enllaços externs per lloc. Aigüestortes té 2 (parc + taxi per a l'Estany de Sant Maurici).
 const traditionLinks: Record<string, string[]> = {
+  'aiguestortes-santmaurici': [
+    'https://parcsnaturals.gencat.cat/es/xarxa-de-parcs/aiguestortes/inici/',
+    'https://taxisespot.com/ca/',
+    'https://ca.wikiloc.com/wikiloc/user.do?id=317310',
+  ],
   'botigues-salas': ['https://botiguesmuseusalas.cat/'],
   'ecomuseu-aneu': ['https://www.ecomuseu.com/'],
   'salines-gerri': ['https://museudegerri.cat/visita-a-les-salines/'],
-  'parc-alt-pirineu': [
-    'https://parcsnaturals.gencat.cat/ca/xarxa-de-parcs/alt-pirineu/inici/index.html',
-    'https://taxisespot.com/ca/',
-  ],
+  'parc-alt-pirineu': ['https://parcsnaturals.gencat.cat/ca/xarxa-de-parcs/alt-pirineu/inici/index.html'],
   'tor': ['https://www.traveler.es/articulos/tor-la-montana-maldita-de-los-pirineos'],
 };
 
@@ -162,6 +165,22 @@ export default function Traditions() {
                   )}
                 >
                   {tradition.linkText2}
+                </a>
+              )}
+
+              {traditionLinks[tradition.id]?.[2] && 'linkText3' in tradition && tradition.linkText3 && (
+                <a
+                  href={traditionLinks[tradition.id][2]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    "inline-flex items-center gap-1 mt-2 text-xs font-light tracking-wide transition-colors self-start",
+                    tradition.dark
+                      ? "text-[#a8b8a8] hover:text-[#d4a05a]"
+                      : "text-[#7a7a6a] hover:text-[#b07d3a]"
+                  )}
+                >
+                  {tradition.linkText3}
                 </a>
               )}
             </div>
