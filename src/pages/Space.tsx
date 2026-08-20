@@ -180,47 +180,64 @@ export default function Space() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[200] bg-black/90 flex items-center justify-center p-6"
+            className="fixed inset-0 z-[200] bg-black/95 flex flex-col p-2 sm:p-3 md:p-4"
             onClick={closeViewer}
           >
+            {/* Botó tancar — sempre visible al top-right per damunt de tot */}
+            <button
+              onClick={closeViewer}
+              aria-label="Tancar"
+              className="absolute top-2 right-2 md:top-4 md:right-4 z-20 w-11 h-11 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 text-white flex items-center justify-center hover:bg-black/70 transition-colors"
+            >
+              <X size={22} />
+            </button>
+
             <motion.div
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
-              className="relative w-full max-w-3xl flex flex-col gap-3"
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              className="relative w-full h-full flex flex-col gap-2 md:gap-3 min-h-0"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative aspect-[16/10] bg-black rounded-lg overflow-hidden">
+              {/* Imatge — ocupa TOT l'espai disponible verticalment (sense aspect-ratio fixe) */}
+              <div className="relative flex-1 min-h-0 flex items-center justify-center">
                 <img
                   src={zonePhotos[activeZone][photoIndex]}
-                  className="w-full h-full object-contain"
+                  className="max-w-full max-h-full w-auto h-auto object-contain"
                   alt={`${sp.zones[activeZone as keyof typeof sp.zones].title} — foto ${photoIndex + 1}`}
                   referrerPolicy="no-referrer"
                 />
-                <button onClick={prevPhoto} className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white/30 transition-colors">
-                  <ChevronLeft />
+                <button
+                  onClick={prevPhoto}
+                  aria-label="Anterior"
+                  className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-11 h-11 md:w-12 md:h-12 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 text-white flex items-center justify-center hover:bg-black/70 transition-colors"
+                >
+                  <ChevronLeft size={22} />
                 </button>
-                <button onClick={nextPhoto} className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 border border-white/20 text-white flex items-center justify-center hover:bg-white/30 transition-colors">
-                  <ChevronRight />
-                </button>
-                <button onClick={closeViewer} className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors">
-                  <X size={24} />
+                <button
+                  onClick={nextPhoto}
+                  aria-label="Següent"
+                  className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-11 h-11 md:w-12 md:h-12 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 text-white flex items-center justify-center hover:bg-black/70 transition-colors"
+                >
+                  <ChevronRight size={22} />
                 </button>
               </div>
 
-              <div className="flex justify-between items-center text-white px-1">
-                <div className="font-display text-sm">{sp.zones[activeZone as keyof typeof sp.zones].title}</div>
-                <div className="text-xs text-white/50">{photoIndex + 1} / {zonePhotos[activeZone].length}</div>
+              {/* Info bar — títol + contador */}
+              <div className="flex justify-between items-center text-white px-2 shrink-0">
+                <div className="font-display text-sm md:text-base">{sp.zones[activeZone as keyof typeof sp.zones].title}</div>
+                <div className="text-xs text-white/60 tabular-nums">{photoIndex + 1} / {zonePhotos[activeZone].length}</div>
               </div>
 
-              <div className="flex flex-row gap-2 overflow-x-auto pb-1">
+              {/* Miniatures — més compactes */}
+              <div className="flex flex-row gap-1.5 overflow-x-auto pb-1 shrink-0">
                 {zonePhotos[activeZone].map((p, i) => (
                   <img
                     key={i}
                     src={p}
                     onClick={() => setPhotoIndex(i)}
                     className={cn(
-                      'w-16 h-12 object-cover cursor-pointer rounded-sm transition-all flex-shrink-0',
+                      'h-12 w-16 md:h-14 md:w-20 object-cover cursor-pointer rounded-sm transition-all flex-shrink-0',
                       i === photoIndex ? 'opacity-100 border-2 border-[#b07d3a]' : 'opacity-40 hover:opacity-70'
                     )}
                     referrerPolicy="no-referrer"

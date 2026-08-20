@@ -7,7 +7,8 @@
       "Bash(node -e \"try { require\\('sharp'\\); console.log\\('sharp: OK'\\); } catch\\(e\\) { console.log\\('sharp: NO'\\); }\")",
       "Bash(node -e *)",
       "Bash(node scripts/convert-to-webp.js)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(node -e ' *)"
     ]
   }
 }

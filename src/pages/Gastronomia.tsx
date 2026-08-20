@@ -5,6 +5,17 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'] as const;
 
+// Fotos dels plats — ordre coincideix amb l'array `items` de translations.
+const DISH_IMAGES = [
+  '/girella.webp',
+  '/trinxat.webp',
+  '/tupi.webp',
+  '/arros-carreretes.webp',
+  '/xolis.webp',
+  '/vianda.webp',
+  '/farcit.webp',
+];
+
 export default function Gastronomia() {
   const { t } = useLanguage();
   const g = t.gastronomia;
@@ -48,10 +59,6 @@ export default function Gastronomia() {
 
       {/* Divider "menú" — evocador de receptari */}
       <section className="max-w-5xl mx-auto px-6 pt-16 pb-8 text-center">
-        <div className="text-[11px] font-bold tracking-[0.35em] uppercase text-[#b07d3a] mb-4">
-          ─── {g.dividerCount} ───
-        </div>
-        <div className="text-[#b07d3a]/70 text-xl mb-3">✦</div>
         <p className="font-display italic text-[#5a5a4a] text-lg md:text-xl">
           {g.dividerLabel}
         </p>
@@ -75,7 +82,7 @@ export default function Gastronomia() {
                 )}
               >
                 {/* Encapçalament: numeral + tag */}
-                <div className="flex items-baseline gap-4 mb-3">
+                <div className="flex items-baseline gap-4 mb-5">
                   <span
                     className={cn(
                       'font-display text-[#b07d3a]/60 leading-none tabular-nums',
@@ -89,23 +96,27 @@ export default function Gastronomia() {
                   </span>
                 </div>
 
-                {/* Separador de guionets (recepta manuscrita) */}
-                <div className="text-[10px] text-[#c0b8a8] tracking-[0.45em] mb-5 select-none overflow-hidden">
-                  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
-                </div>
-
                 {/* Contingut: imatge + text */}
                 <div className={cn('flex flex-col sm:flex-row items-start', featured ? 'gap-6' : 'gap-5')}>
                   <div
                     className={cn(
-                      'shrink-0 bg-[#e0d8c8] rounded-sm flex items-center justify-center text-[#9a9a8a]',
+                      'shrink-0 bg-[#e0d8c8] rounded-sm overflow-hidden flex items-center justify-center text-[#9a9a8a]',
                       featured
                         ? 'w-full sm:w-[200px] h-[200px] text-4xl'
                         : 'w-full sm:w-[130px] h-[130px] text-2xl'
                     )}
-                    aria-hidden="true"
                   >
-                    📸
+                    {DISH_IMAGES[idx] ? (
+                      <img
+                        src={DISH_IMAGES[idx]}
+                        alt={dish.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                        referrerPolicy="no-referrer"
+                      />
+                    ) : (
+                      <span aria-hidden="true">📸</span>
+                    )}
                   </div>
                   <div className="flex-1 min-w-0">
                     <h2
@@ -144,9 +155,6 @@ export default function Gastronomia() {
       {g.restaurants && g.restaurants.length > 0 && (
         <section className="max-w-6xl mx-auto px-6 py-20">
           <div className="text-center mb-12">
-            <div className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#b07d3a] mb-3">
-              ─── ✦ ───
-            </div>
             <h2 className="font-display text-3xl md:text-4xl text-[#2d4a2d] mb-3">
               {g.restaurantsTitle}
             </h2>
@@ -154,38 +162,66 @@ export default function Gastronomia() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {g.restaurants.map((r, idx) => (
-              <motion.article
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.08 }}
-                className="bg-white rounded-sm border border-[#e0d8c8] overflow-hidden hover:shadow-md transition-shadow flex flex-col"
-              >
-                <div className="aspect-[4/3] bg-[#e0d8c8] flex items-center justify-center text-[#9a9a8a] text-3xl">
-                  📸
-                </div>
-                <div className="p-5 flex flex-col flex-1">
-                  <h3 className="font-display text-lg text-[#2d4a2d] mb-2 uppercase tracking-widest">
-                    {r.name}
-                  </h3>
-                  <p className="text-sm font-light text-[#5a5a4a] leading-relaxed mb-4 flex-1">
-                    {r.desc}
-                  </p>
-                  {r.url && (
-                    <a
-                      href={r.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs text-[#b07d3a] font-medium hover:text-[#2d4a2d] transition-colors self-start border-b border-[#b07d3a]/40 hover:border-[#2d4a2d] pb-0.5"
-                    >
-                      {g.restaurantsLinkText}
-                    </a>
-                  )}
-                </div>
-              </motion.article>
-            ))}
+            {g.restaurants.map((r, idx) => {
+              const cardBody = (
+                <>
+                  <div className="aspect-[4/3] bg-[#e0d8c8] overflow-hidden flex items-center justify-center text-[#9a9a8a] text-3xl">
+                    {r.image ? (
+                      <img
+                        src={r.image}
+                        alt={r.name}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                        referrerPolicy="no-referrer"
+                      />
+                    ) : (
+                      <span aria-hidden="true">📸</span>
+                    )}
+                  </div>
+                  <div className="p-5 flex flex-col flex-1">
+                    <h3 className="font-display text-lg text-[#2d4a2d] mb-2 uppercase tracking-widest">
+                      {r.name}
+                    </h3>
+                    <p className="text-sm font-light text-[#5a5a4a] leading-relaxed mb-4 flex-1">
+                      {r.desc}
+                    </p>
+                    {r.url && (
+                      <span className="text-xs text-[#b07d3a] font-medium group-hover:text-[#2d4a2d] transition-colors self-start border-b border-[#b07d3a]/40 group-hover:border-[#2d4a2d] pb-0.5">
+                        {g.restaurantsLinkText}
+                      </span>
+                    )}
+                  </div>
+                </>
+              );
+
+              const commonClasses =
+                'group bg-white rounded-sm border border-[#e0d8c8] overflow-hidden hover:shadow-md transition-shadow flex flex-col';
+
+              const animProps = {
+                initial: { opacity: 0, y: 20 },
+                whileInView: { opacity: 1, y: 0 },
+                viewport: { once: true },
+                transition: { delay: idx * 0.08 },
+              };
+
+              return r.url ? (
+                <motion.a
+                  key={idx}
+                  href={r.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={r.name}
+                  className={commonClasses + ' cursor-pointer'}
+                  {...animProps}
+                >
+                  {cardBody}
+                </motion.a>
+              ) : (
+                <motion.article key={idx} className={commonClasses} {...animProps}>
+                  {cardBody}
+                </motion.article>
+              );
+            })}
           </div>
         </section>
       )}
