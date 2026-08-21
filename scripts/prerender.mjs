@@ -150,10 +150,19 @@ async function main() {
   }
 
   console.log(`\n✅  ${successes} rutes prerenderitzades${failures ? ` (${failures} fallides)` : ''}\n`);
-  if (failures > 0) process.exit(1);
+  // Nota: NO fem `process.exit(1)` si algunes rutes fallen. Netlify considera
+  // qualsevol exit code no-zero com a build fallit, però per aquestes rutes
+  // encara tenim el SPA fallback (dist/index.html), o sigui que la web continua
+  // funcionant. Deixem el warning al log per veure-ho, però no bloquegem el deploy.
 }
 
 main().catch((err) => {
-  console.error('❌  Prerender error:', err);
-  process.exit(1);
+  // Si Puppeteer no pot llançar-se (Chromium no descarregat a Netlify, memòria
+  // insuficient, etc.), no bloquegem el deploy — la web serveix el SPA vanilla
+  // via _redirects i les meta tags dinàmiques igualment s'apliquen client-side.
+  // Perdem l'avantatge SEO del prerender fins que arreglem la causa, però la
+  // web queda publicada.
+  console.error('❌  Prerender error (deploy continua, SEO en mode SPA):', err.message);
+  console.error(err.stack);
+  process.exit(0);
 });
