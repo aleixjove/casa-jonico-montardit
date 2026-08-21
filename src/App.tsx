@@ -20,6 +20,7 @@ import Accessibility from './pages/legal/Accessibility';
 import CasaRuralPallars from './pages/CasaRuralPallars';
 import CasaRuralGruposFamilias from './pages/CasaRuralGruposFamilias';
 import Gastronomia from './pages/Gastronomia';
+import NotFound from './pages/NotFound';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -31,10 +32,27 @@ function ScrollToTop() {
   return null;
 }
 
+// Actualitza <link rel="canonical"> a cada canvi de ruta perquè cada pàgina
+// declari la seva pròpia URL canònica (evita que Google dedupliqui pàgines).
+const CANONICAL_BASE = 'https://casajonicomontardit.com';
+function CanonicalUpdater() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const el = document.querySelector('link[rel="canonical"]');
+    if (!el) return;
+    const path = pathname === '/' ? '' : pathname.replace(/\/$/, '');
+    el.setAttribute('href', `${CANONICAL_BASE}${path}`);
+  }, [pathname]);
+
+  return null;
+}
+
 export default function App() {
   return (
     <Router>
       <ScrollToTop />
+      <CanonicalUpdater />
       <PromoPopup />
       <div className="min-h-screen flex flex-col">
         <Navbar />
@@ -57,6 +75,7 @@ export default function App() {
             <Route path="/accesibilitat" element={<Accessibility />} />
             <Route path="/casa-rural-pallars-sobira" element={<CasaRuralPallars />} />
             <Route path="/casa-rural-grupos-familias" element={<CasaRuralGruposFamilias />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

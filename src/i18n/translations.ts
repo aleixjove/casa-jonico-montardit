@@ -383,6 +383,12 @@ export const translations = {
       cta: 'Reservar con descuento',
       footer: 'Sin intermediarios · Confirmación en menos de 24h',
     },
+    notFound: {
+      code: '404',
+      title: 'Página no encontrada',
+      desc: 'Esta página no existe o ha sido movida. Es posible que el enlace esté roto o que hayas escrito mal la dirección.',
+      cta: 'Volver al inicio',
+    },
   },
 
   ca: {
@@ -767,6 +773,12 @@ export const translations = {
       cta: 'Reservar amb descompte',
       footer: 'Sense intermediaris · Confirmació en menys de 24h',
     },
+    notFound: {
+      code: '404',
+      title: 'Pàgina no trobada',
+      desc: "Aquesta pàgina no existeix o ha estat moguda. És possible que l'enllaç estigui trencat o que hagis escrit malament l'adreça.",
+      cta: "Tornar a l'inici",
+    },
   },
 
   en: {
@@ -1150,6 +1162,12 @@ export const translations = {
       subtitle: 'By booking on our website directly',
       cta: 'Book with discount',
       footer: 'No middlemen · Confirmation within 24h',
+    },
+    notFound: {
+      code: '404',
+      title: 'Page not found',
+      desc: "This page doesn't exist or has been moved. The link may be broken or the address may have been mistyped.",
+      cta: 'Back to home',
     },
   },
 };

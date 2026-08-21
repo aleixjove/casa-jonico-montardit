@@ -162,7 +162,7 @@ export default function Location() {
                 <p className="font-display text-xl text-white mb-2">{l.mapTitle}</p>
                 <p className="text-white/70 text-sm font-light mb-8">{l.mapDesc}</p>
                 <a
-                  href="https://www.google.com/maps/search/Montardit+de+Dalt"
+                  href="https://www.google.com/maps/search/?api=1&query=Carrer+de+la+Font+Montardit+de+Dalt+25568+Lleida"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#f5c878] font-bold uppercase tracking-widest text-[11px] flex items-center justify-center gap-2 hover:underline"

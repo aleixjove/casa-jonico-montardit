@@ -1,1 +1,7 @@
-/*    /index.html   200
+# Els fitxers prerenderitzats (dist/<ruta>/index.html) es serveixen
+# automàticament per Netlify si existeixen (via "pretty URLs").
+#
+# Aquesta regla catch-all NOMÉS s'aplica a rutes que NO tinguin fitxer
+# corresponent → SPA fallback amb HTTP 404 real perquè Google no indexi
+# rutes inexistents.
+/*    /index.html    404

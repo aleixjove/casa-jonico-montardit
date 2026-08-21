@@ -2,10 +2,7 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Redirects gestionats a public/_redirects (whitelist de rutes + 404 real)
 
 # Cache immutable Vite build assets (hashed filenames) for 1 year
 [[headers]]
