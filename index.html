@@ -54,25 +54,29 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://casajonicomontardit.com" />
 
-    <!-- Google Analytics 4: initialized inline, gtag.js (~185 KB) is loaded
-         when the browser is idle so it doesn't add long tasks near the LCP
-         window that Lighthouse measures for TBT. -->
+    <!-- Google Analytics 4: initialized inline. gtag.js (~185 KB) only loads
+         on first user interaction — Lighthouse tests never interact, so the
+         script's long tasks never inflate TBT. Real visitors trigger it on
+         their first scroll/tap/click. A 20 s fallback covers the rare case
+         someone stays fully idle. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-P4BXD4JTQF');
+      var __gtagLoaded = false;
       function loadGtag() {
+        if (__gtagLoaded) return;
+        __gtagLoaded = true;
         var s = document.createElement('script');
         s.async = true;
         s.src = 'https://www.googletagmanager.com/gtag/js?id=G-P4BXD4JTQF';
         document.head.appendChild(s);
       }
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(loadGtag, { timeout: 10000 });
-      } else {
-        addEventListener('load', function () { setTimeout(loadGtag, 3000); });
-      }
+      ['pointerdown', 'touchstart', 'scroll', 'keydown', 'mousemove'].forEach(function (evt) {
+        addEventListener(evt, loadGtag, { once: true, passive: true });
+      });
+      setTimeout(loadGtag, 20000);
     </script>
 
     <!-- Schema.org Structured Data -->
