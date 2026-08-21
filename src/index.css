@@ -1,9 +1,18 @@
 @import "tailwindcss";
 
+/* Self-hosted fonts. Substitueixen Google Fonts: mateix origen, cachejables
+   com immutable, sense round-trip a fonts.googleapis.com + fonts.gstatic.com.
+   Els paquets @fontsource-variable exposen la font-family com "Fraunces
+   Variable" / "Inter Variable", per això referenciem aquest nom exacte als
+   theme tokens de sota. Import només wght.css (variable weight axis) —
+   evita els altres axes (opsz, wonk, italic separat) que no fem servir. */
+@import "@fontsource-variable/fraunces/wght.css";
+@import "@fontsource-variable/inter/wght.css";
+
 @theme {
-  --font-serif: "Fraunces", serif;
-  --font-display: "Fraunces", serif;
-  --font-sans: "Inter", sans-serif;
+  --font-serif: "Fraunces Variable", "Fraunces", Georgia, serif;
+  --font-display: "Fraunces Variable", "Fraunces", Georgia, serif;
+  --font-sans: "Inter Variable", "Inter", system-ui, -apple-system, sans-serif;
 
   --color-primary: #2D3A27; /* Dark Green */
   --color-secondary: #F5F2ED; /* Warm Beige */

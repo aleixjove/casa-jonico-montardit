@@ -87,10 +87,31 @@ function createServer(rootDir, port) {
   });
 }
 
+// Troba els noms hashejats dels woff2 principals que serveixen la majoria del
+// text (llatí bàsic). Els altres ranges (llatí-ext, ciríl·lic, grec, viet)
+// només es baixen si la pàgina té text que ho requereix, gràcies a
+// `unicode-range` als @font-face → no cal preloadar-los.
+function findFontPreloads() {
+  const assetsDir = path.join(DIST, 'assets');
+  if (!fs.existsSync(assetsDir)) return '';
+  const files = fs.readdirSync(assetsDir);
+  const fraunces = files.find((f) => f.startsWith('fraunces-latin-wght-normal-') && f.endsWith('.woff2'));
+  const inter = files.find((f) => f.startsWith('inter-latin-wght-normal-') && f.endsWith('.woff2'));
+  const links = [];
+  if (fraunces) links.push(`<link rel="preload" as="font" type="font/woff2" href="/assets/${fraunces}" crossorigin>`);
+  if (inter) links.push(`<link rel="preload" as="font" type="font/woff2" href="/assets/${inter}" crossorigin>`);
+  return links.join('\n    ');
+}
+
 async function main() {
   if (!fs.existsSync(DIST)) {
     console.error('❌  dist/ no existeix. Corre `vite build` primer.');
     process.exit(1);
+  }
+
+  const fontPreloads = findFontPreloads();
+  if (fontPreloads) {
+    console.log(`\n🔤  Preload de fonts principals injectat al head`);
   }
 
   console.log(`\n📦  Prerender de ${ROUTES.length} rutes\n`);
@@ -119,14 +140,15 @@ async function main() {
 
         let html = await page.content();
 
-        // Puppeteer executa el `onload` del <link rel="preload" ...> mentre
-        // renderitza, i el pattern `onload="this.rel='stylesheet'"` acaba
-        // deixant `rel="stylesheet"` al HTML capturat. Restaurem `rel="preload"`
-        // perquè el navegador real prioritzi el download de la font CSS.
-        html = html.replace(
-          /<link rel="stylesheet" as="style" href="https:\/\/fonts\.googleapis\.com/g,
-          '<link rel="preload" as="style" href="https://fonts.googleapis.com'
-        );
+        // Injecta preloads de les fonts latin-basic (LCP element usa Fraunces).
+        // Chromium detecta les fonts usades i injecta els seus propis
+        // <link rel="preload"> quan Puppeteer captura, però amb un timing
+        // massa tardà per ser útils al primer visitant real. Netegem els
+        // seus i posem els nostres al head (que arriben abans del CSS).
+        html = html.replace(/\s*<link[^>]*rel="preload"[^>]*as="font"[^>]*>/g, '');
+        if (fontPreloads) {
+          html = html.replace('</head>', `    ${fontPreloads}\n  </head>`);
+        }
 
         const outPath =
           route === '/'
