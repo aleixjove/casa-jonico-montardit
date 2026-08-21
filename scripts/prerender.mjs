@@ -115,6 +115,19 @@ async function main() {
 
       try {
         await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 });
+
+        // Amb React.lazy + Suspense, la ruta activa és un chunk separat que
+        // el bundle inicial ha de baixar abans de renderitzar-la. Esperem
+        // a que <main> tingui contingut real (el fallback és `min-h-[60vh]`
+        // buit → children == 0) i llavors donem 400 ms extra a useEffect
+        // (canonical, title, meta).
+        await page.waitForFunction(
+          () => {
+            const main = document.querySelector('main');
+            return main && main.children.length > 0 && main.textContent.trim().length > 100;
+          },
+          { timeout: 15000 }
+        );
         await new Promise((r) => setTimeout(r, 400));
 
         let html = await page.content();
