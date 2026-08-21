@@ -247,30 +247,41 @@ export default function Pricing() {
       <div className="bg-white border border-[#e0d8c8] rounded-sm p-8 shadow-xl">
         <div className="flex items-center justify-between mb-8">
           <div className="flex flex-col gap-2">
-            <h3 className="font-display text-xl text-black capitalize">
+            {/* Label del calendari — no és un heading semàntic (Lighthouse
+                marcava skip de nivell perquè no hi ha h2 previ a la mateixa
+                secció) sinó una etiqueta del widget de calendari. */}
+            <div className="font-display text-xl text-black capitalize" aria-live="polite">
               {p.calMonths[month]} {year}
-            </h3>
+            </div>
             <span className={`text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded-full w-fit ${monthSeasonRow.badge}`}>
               {monthSeasonRow.label}
             </span>
           </div>
           <div className="flex gap-2">
-            <button onClick={() => changeMonth(-1)} className="w-8 h-8 border border-[#d0c8b8] rounded-sm flex items-center justify-center text-[#2d4a2d] hover:bg-[#2d4a2d] hover:text-white transition-all">
-              <ChevronLeft className="w-4 h-4" />
+            <button
+              onClick={() => changeMonth(-1)}
+              aria-label={p.calPrevMonth}
+              className="w-8 h-8 border border-[#d0c8b8] rounded-sm flex items-center justify-center text-[#2d4a2d] hover:bg-[#2d4a2d] hover:text-white transition-all"
+            >
+              <ChevronLeft className="w-4 h-4" aria-hidden="true" />
             </button>
-            <button onClick={() => changeMonth(1)} className="w-8 h-8 border border-[#d0c8b8] rounded-sm flex items-center justify-center text-[#2d4a2d] hover:bg-[#2d4a2d] hover:text-white transition-all">
-              <ChevronRight className="w-4 h-4" />
+            <button
+              onClick={() => changeMonth(1)}
+              aria-label={p.calNextMonth}
+              className="w-8 h-8 border border-[#d0c8b8] rounded-sm flex items-center justify-center text-[#2d4a2d] hover:bg-[#2d4a2d] hover:text-white transition-all"
+            >
+              <ChevronRight className="w-4 h-4" aria-hidden="true" />
             </button>
           </div>
         </div>
 
-        <p className={`text-xs text-center mb-6 italic transition-colors ${awaitingEnd ? 'text-[#b07d3a] font-medium' : 'text-[#a09a8a]'}`}>
+        <p className={`text-xs text-center mb-6 italic transition-colors ${awaitingEnd ? 'text-[#8a5a2b] font-medium' : 'text-[#6a6a5a]'}`}>
           {awaitingEnd ? p.calInstruccionEnd : p.calInstruccion}
         </p>
 
         <div className="grid grid-cols-7 gap-1 mb-8">
           {p.calDays.map(dow => (
-            <div key={dow} className="text-center text-[10px] font-bold uppercase tracking-widest text-[#9a9a8a] py-2">{dow}</div>
+            <div key={dow} className="text-center text-[10px] font-bold uppercase tracking-widest text-[#6a6a5a] py-2">{dow}</div>
           ))}
           {days}
         </div>
@@ -295,11 +306,11 @@ export default function Pricing() {
 
         {/* Nota mínims de nits — sempre visible sota la llegenda */}
         <div className="mt-5 pt-5 border-t border-[#ede8de] flex flex-col gap-1.5">
-          <p className="text-[11px] text-[#9a9a8a] font-light flex items-center gap-1.5">
+          <p className="text-[11px] text-[#6a6a5a] font-light flex items-center gap-1.5">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#b07d3a] flex-shrink-0" />
             {p.minNightsHigh}
           </p>
-          <p className="text-[11px] text-[#9a9a8a] font-light flex items-center gap-1.5">
+          <p className="text-[11px] text-[#6a6a5a] font-light flex items-center gap-1.5">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#2d4a2d] flex-shrink-0" />
             {p.minNightsMid}
           </p>
@@ -311,7 +322,7 @@ export default function Pricing() {
   const renderSummary = () => {
     if (!selectStart || !selectEnd) {
       return (
-        <div className="text-center py-8 text-[#a0b0a0] font-light italic text-sm">
+        <div className="text-center py-8 text-[#5a7a5a] font-light italic text-sm">
           {awaitingEnd ? p.summaryEmptyEnd : p.summaryEmpty}
         </div>
       );
@@ -386,7 +397,7 @@ export default function Pricing() {
         </div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <motion.span initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#b07d3a] mb-4 block">
+          <motion.span initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#8a5a2b] mb-4 block">
             {p.badge}
           </motion.span>
           <motion.h1 initial={false} animate={{ opacity: 1, y: 0 }} className="text-2xl md:text-5xl font-display text-[#2d4a2d] mb-10 leading-tight">
@@ -403,21 +414,21 @@ export default function Pricing() {
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="flex flex-wrap justify-center gap-12 md:gap-24 items-center border-b border-[#ddd6c8] pb-16">
           <div className="text-center">
-            <p className="text-[11px] font-bold tracking-widest uppercase text-[#b07d3a] mb-2">{p.bannerMin}</p>
+            <p className="text-[11px] font-bold tracking-widest uppercase text-[#8a5a2b] mb-2">{p.bannerMin}</p>
             <p className="font-display text-2xl text-black">{p.bannerMinVal}</p>
-            <p className="text-[11px] text-[#9a9a8a] mt-1">{p.bannerMinSub}</p>
+            <p className="text-[11px] text-[#6a6a5a] mt-1">{p.bannerMinSub}</p>
           </div>
           <div className="hidden md:block w-px h-12 bg-[#d0c8b8]" />
           <div className="text-center">
-            <p className="text-[11px] font-bold tracking-widest uppercase text-[#b07d3a] mb-2">{p.bannerCheckin}</p>
+            <p className="text-[11px] font-bold tracking-widest uppercase text-[#8a5a2b] mb-2">{p.bannerCheckin}</p>
             <p className="font-display text-2xl text-black">{p.bannerCheckinVal}</p>
-            <p className="text-[11px] text-[#9a9a8a] mt-1">{p.bannerCheckinSub}</p>
+            <p className="text-[11px] text-[#6a6a5a] mt-1">{p.bannerCheckinSub}</p>
           </div>
           <div className="hidden md:block w-px h-12 bg-[#d0c8b8]" />
           <div className="text-center">
-            <p className="text-[11px] font-bold tracking-widest uppercase text-[#b07d3a] mb-2">{p.bannerCap}</p>
+            <p className="text-[11px] font-bold tracking-widest uppercase text-[#8a5a2b] mb-2">{p.bannerCap}</p>
             <p className="font-display text-2xl text-black">{p.bannerCapVal}</p>
-            <p className="text-[11px] text-[#9a9a8a] mt-1">{p.bannerCapSub}</p>
+            <p className="text-[11px] text-[#6a6a5a] mt-1">{p.bannerCapSub}</p>
           </div>
         </div>
       </section>
@@ -481,7 +492,7 @@ export default function Pricing() {
                     </div>
                     <h4 className="font-display text-xl text-[#2d4a2d]">{p.successTitle}</h4>
                     <p className="text-sm text-[#5a5a4a] font-light">{p.successDesc}</p>
-                    <button onClick={() => setStatus('idle')} className="text-[#b07d3a] text-[10px] font-bold uppercase tracking-widest hover:underline">{p.successBtn}</button>
+                    <button onClick={() => setStatus('idle')} className="text-[#8a5a2b] text-[10px] font-bold uppercase tracking-widest hover:underline">{p.successBtn}</button>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
@@ -506,14 +517,14 @@ export default function Pricing() {
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-1">
                         <label className="text-[10px] font-bold uppercase tracking-widest text-[#6a6a5a]">{p.fieldPersonas}</label>
-                        <select value={formData.personas} onChange={e => setFormData({...formData, personas: e.target.value})} className="w-full px-4 py-2 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] outline-none text-sm font-light appearance-none">
+                        <select aria-label={p.fieldPersonas} value={formData.personas} onChange={e => setFormData({...formData, personas: e.target.value})} className="w-full px-4 py-2 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] outline-none text-sm font-light appearance-none">
                           <option value="">—</option>
                           {[1,2,3,4,5,6,7,8].map(n => <option key={n} value={n}>{n}</option>)}
                         </select>
                       </div>
                       <div className="space-y-1">
                         <label className="text-[10px] font-bold uppercase tracking-widest text-[#6a6a5a]">{p.fieldNinos}</label>
-                        <select value={formData.ninos} onChange={e => setFormData({...formData, ninos: e.target.value})} className="w-full px-4 py-2 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] outline-none text-sm font-light appearance-none">
+                        <select aria-label={p.fieldNinos} value={formData.ninos} onChange={e => setFormData({...formData, ninos: e.target.value})} className="w-full px-4 py-2 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] outline-none text-sm font-light appearance-none">
                           {[0,1,2,3,4].map(n => <option key={n} value={n}>{n}</option>)}
                         </select>
                       </div>
@@ -532,7 +543,7 @@ export default function Pricing() {
                         : <>{p.submitBtn} <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></>
                       }
                     </button>
-                    <p className="text-[10px] text-center text-[#9a9a8a] font-light">{p.confirmNote}</p>
+                    <p className="text-[10px] text-center text-[#6a6a5a] font-light">{p.confirmNote}</p>
                   </form>
                 )}
               </AnimatePresence>
