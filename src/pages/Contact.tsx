@@ -72,7 +72,7 @@ export default function Contact() {
           <motion.span initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#b07d3a] mb-4 block">
             {c.badge}
           </motion.span>
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-2xl md:text-5xl font-display text-[#2d4a2d] mb-10 leading-tight">
+          <motion.h1 initial={false} animate={{ opacity: 1, y: 0 }} className="text-2xl md:text-5xl font-display text-[#2d4a2d] mb-10 leading-tight">
             {c.title} <br /> <span>{c.titleSpan}</span>
           </motion.h1>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="w-24 h-px bg-[#b07d3a] mx-auto mb-10" />

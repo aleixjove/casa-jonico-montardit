@@ -35,10 +35,13 @@ export default function Home() {
           >
             &nbsp;
           </motion.span>
+          {/* NOTA: initial={false} evita que motion torni a fer opacity: 0
+              durant la hydration client-only del HTML prerenderitzat. Sense
+              això perdíem ~1000 ms del LCP en la re-execució de l'animació
+              (aquest h1 és l'element LCP en mòbil). */}
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-8xl font-serif text-white mb-8 leading-tight"
           >
             {h.heroTitle1} <br /> <span>{h.heroTitle2}</span>

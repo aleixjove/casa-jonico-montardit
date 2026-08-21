@@ -75,7 +75,7 @@ export default function Space() {
           <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop" className="h-full w-full object-cover" alt="" loading="lazy" referrerPolicy="no-referrer" />
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-2xl md:text-5xl font-display text-[#2d4a2d] mb-10 leading-tight">
+          <motion.h1 initial={false} animate={{ opacity: 1, y: 0 }} className="text-2xl md:text-5xl font-display text-[#2d4a2d] mb-10 leading-tight">
             {sp.title} <br /> <span>{sp.titleSpan}</span>
           </motion.h1>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="w-24 h-px bg-[#b07d3a] mx-auto mb-10" />

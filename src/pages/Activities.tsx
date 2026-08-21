@@ -71,7 +71,7 @@ export default function Activities() {
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             className="text-2xl md:text-5xl font-display text-[#2d4a2d] mb-10 leading-tight"
           >

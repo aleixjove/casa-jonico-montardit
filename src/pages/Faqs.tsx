@@ -57,9 +57,8 @@ export default function Faqs() {
             {f.badge}
           </motion.span>
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
             className="text-2xl md:text-5xl font-display text-[#2d4a2d] mb-10 leading-tight"
           >
             {f.title}
