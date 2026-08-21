@@ -276,19 +276,19 @@ export default function Pricing() {
         </div>
 
         <div className="pt-6 border-t border-[#ede8de] flex flex-wrap gap-x-6 gap-y-3">
-          <div className="flex items-center gap-2 text-[11px] text-[#7a7a6a]">
+          <div className="flex items-center gap-2 text-[11px] text-[#6a6a5a]">
             <div className="w-3 h-3 bg-[#2d4a2d] rounded-sm" /> {p.calSeleccionado}
           </div>
-          <div className="flex items-center gap-2 text-[11px] text-[#7a7a6a]">
+          <div className="flex items-center gap-2 text-[11px] text-[#6a6a5a]">
             <div className="w-3 h-3 bg-[#e0ebe0] border border-[#c8d8c8] rounded-sm" /> {p.calRango}
           </div>
-          <div className="flex items-center gap-2 text-[11px] text-[#7a7a6a]">
+          <div className="flex items-center gap-2 text-[11px] text-[#6a6a5a]">
             <div className="w-3 h-3 bg-[#f0e8e0] border border-[#d0c8b8] rounded-sm" /> {p.calNoDisp}
           </div>
-          <div className="flex items-center gap-2 text-[11px] text-[#7a7a6a]">
+          <div className="flex items-center gap-2 text-[11px] text-[#6a6a5a]">
             <div className="w-2 h-2 bg-[#b07d3a] rounded-full" /> {p.calTAlta}
           </div>
-          <div className="flex items-center gap-2 text-[11px] text-[#7a7a6a]">
+          <div className="flex items-center gap-2 text-[11px] text-[#6a6a5a]">
             <div className="w-2 h-2 bg-[#2d4a2d] rounded-full" /> {p.calTMedia}
           </div>
         </div>
@@ -487,39 +487,39 @@ export default function Pricing() {
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-1">
-                        <label className="text-[10px] font-bold uppercase tracking-widest text-[#7a7a6a]">{p.fieldNombre}</label>
+                        <label className="text-[10px] font-bold uppercase tracking-widest text-[#6a6a5a]">{p.fieldNombre}</label>
                         <input type="text" value={formData.nombre} onChange={e => setFormData({...formData, nombre: e.target.value})} placeholder={p.placeholderNombre} required className="w-full px-4 py-2 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] outline-none text-sm font-light" />
                       </div>
                       <div className="space-y-1">
-                        <label className="text-[10px] font-bold uppercase tracking-widest text-[#7a7a6a]">{p.fieldApellido}</label>
+                        <label className="text-[10px] font-bold uppercase tracking-widest text-[#6a6a5a]">{p.fieldApellido}</label>
                         <input type="text" value={formData.apellido} onChange={e => setFormData({...formData, apellido: e.target.value})} placeholder={p.placeholderApellido} className="w-full px-4 py-2 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] outline-none text-sm font-light" />
                       </div>
                     </div>
                     <div className="space-y-1">
-                      <label className="text-[10px] font-bold uppercase tracking-widest text-[#7a7a6a]">{p.fieldEmail}</label>
+                      <label className="text-[10px] font-bold uppercase tracking-widest text-[#6a6a5a]">{p.fieldEmail}</label>
                       <input type="email" value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} placeholder={p.placeholderEmail} required className="w-full px-4 py-2 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] outline-none text-sm font-light" />
                     </div>
                     <div className="space-y-1">
-                      <label className="text-[10px] font-bold uppercase tracking-widest text-[#7a7a6a]">{p.fieldTel}</label>
+                      <label className="text-[10px] font-bold uppercase tracking-widest text-[#6a6a5a]">{p.fieldTel}</label>
                       <input type="tel" value={formData.tel} onChange={e => setFormData({...formData, tel: e.target.value})} placeholder={p.placeholderTel} className="w-full px-4 py-2 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] outline-none text-sm font-light" />
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-1">
-                        <label className="text-[10px] font-bold uppercase tracking-widest text-[#7a7a6a]">{p.fieldPersonas}</label>
+                        <label className="text-[10px] font-bold uppercase tracking-widest text-[#6a6a5a]">{p.fieldPersonas}</label>
                         <select value={formData.personas} onChange={e => setFormData({...formData, personas: e.target.value})} className="w-full px-4 py-2 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] outline-none text-sm font-light appearance-none">
                           <option value="">—</option>
                           {[1,2,3,4,5,6,7,8].map(n => <option key={n} value={n}>{n}</option>)}
                         </select>
                       </div>
                       <div className="space-y-1">
-                        <label className="text-[10px] font-bold uppercase tracking-widest text-[#7a7a6a]">{p.fieldNinos}</label>
+                        <label className="text-[10px] font-bold uppercase tracking-widest text-[#6a6a5a]">{p.fieldNinos}</label>
                         <select value={formData.ninos} onChange={e => setFormData({...formData, ninos: e.target.value})} className="w-full px-4 py-2 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] outline-none text-sm font-light appearance-none">
                           {[0,1,2,3,4].map(n => <option key={n} value={n}>{n}</option>)}
                         </select>
                       </div>
                     </div>
                     <div className="space-y-1">
-                      <label className="text-[10px] font-bold uppercase tracking-widest text-[#7a7a6a]">{p.fieldMensaje}</label>
+                      <label className="text-[10px] font-bold uppercase tracking-widest text-[#6a6a5a]">{p.fieldMensaje}</label>
                       <textarea value={formData.mensaje} onChange={e => setFormData({...formData, mensaje: e.target.value})} rows={3} placeholder={p.placeholderMensaje} className="w-full px-4 py-2 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] outline-none text-sm font-light resize-none" />
                     </div>
                     <button

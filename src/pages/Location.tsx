@@ -66,7 +66,7 @@ export default function Location() {
       <section className="max-w-5xl mx-auto px-6 py-20">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl text-black mb-4">{l.distancesTitle}</h2>
-          <p className="text-[12px] font-bold tracking-[0.1em] uppercase text-[#7a7a6a]">{l.distancesSubtitle}</p>
+          <p className="text-[12px] font-bold tracking-[0.1em] uppercase text-[#6a6a5a]">{l.distancesSubtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
@@ -83,7 +83,7 @@ export default function Location() {
               className="bg-white border border-[#e0d8c8] rounded-sm p-8 text-center transition-all duration-300 hover:shadow-xl hover:border-[#2d4a2d] group block cursor-pointer"
             >
               <div className="font-display text-xl text-[#2d4a2d] mb-2 group-hover:scale-110 transition-transform">{item.place}</div>
-              <div className="text-[13px] font-light text-[#7a7a6a] mb-4">{item.info}</div>
+              <div className="text-[13px] font-light text-[#6a6a5a] mb-4">{item.info}</div>
               <div className="font-display text-base text-[#b07d3a]">{item.km}</div>
               <div className="mt-4 text-[10px] font-bold uppercase tracking-widest text-[#b07d3a] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-1">
                 {l.verRuta} <ExternalLink className="w-3 h-3" />
@@ -101,7 +101,7 @@ export default function Location() {
         {/* Nearby Places */}
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl text-black mb-4">{l.nearbyTitle}</h2>
-          <p className="text-[12px] font-bold tracking-[0.1em] uppercase text-[#7a7a6a]">{l.nearbySubtitle}</p>
+          <p className="text-[12px] font-bold tracking-[0.1em] uppercase text-[#6a6a5a]">{l.nearbySubtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">

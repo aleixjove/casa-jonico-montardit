@@ -124,7 +124,7 @@ export default function Home() {
       <section className="py-16 px-6 bg-white border-t border-[#ede8de]">
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-12 h-px bg-[#b07d3a] mx-auto mb-4" />
-          <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#7a7a6a] mb-8">
+          <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#6a6a5a] mb-8">
             {t.descobreixMes.title}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">

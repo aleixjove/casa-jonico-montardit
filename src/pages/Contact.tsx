@@ -150,28 +150,28 @@ export default function Contact() {
                   <motion.form key="form" onSubmit={handleSubmit} className="space-y-6" initial={{ opacity: 1 }} exit={{ opacity: 0 }}>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label className="text-[10px] font-bold uppercase tracking-widest text-[#7a7a6a]">{c.fieldNombre}</label>
+                        <label className="text-[10px] font-bold uppercase tracking-widest text-[#6a6a5a]">{c.fieldNombre}</label>
                         <input type="text" id="nombre" value={formData.nombre} onChange={handleChange} placeholder={c.placeholderNombre} required
                           className="w-full px-4 py-3 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] focus:bg-white outline-none transition-all font-light text-sm" />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-[10px] font-bold uppercase tracking-widest text-[#7a7a6a]">{c.fieldApellido}</label>
+                        <label className="text-[10px] font-bold uppercase tracking-widest text-[#6a6a5a]">{c.fieldApellido}</label>
                         <input type="text" id="apellido" value={formData.apellido} onChange={handleChange} placeholder={c.placeholderApellido}
                           className="w-full px-4 py-3 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] focus:bg-white outline-none transition-all font-light text-sm" />
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[10px] font-bold uppercase tracking-widest text-[#7a7a6a]">{c.fieldEmail}</label>
+                      <label className="text-[10px] font-bold uppercase tracking-widest text-[#6a6a5a]">{c.fieldEmail}</label>
                       <input type="email" id="email" value={formData.email} onChange={handleChange} placeholder={c.placeholderEmail} required
                         className="w-full px-4 py-3 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] focus:bg-white outline-none transition-all font-light text-sm" />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[10px] font-bold uppercase tracking-widest text-[#7a7a6a]">{c.fieldTel}</label>
+                      <label className="text-[10px] font-bold uppercase tracking-widest text-[#6a6a5a]">{c.fieldTel}</label>
                       <input type="tel" id="tel" value={formData.tel} onChange={handleChange} placeholder={c.placeholderTel}
                         className="w-full px-4 py-3 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] focus:bg-white outline-none transition-all font-light text-sm" />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[10px] font-bold uppercase tracking-widest text-[#7a7a6a]">{c.fieldMotivo}</label>
+                      <label className="text-[10px] font-bold uppercase tracking-widest text-[#6a6a5a]">{c.fieldMotivo}</label>
                       <select id="motivo" value={formData.motivo} onChange={handleChange}
                         className="w-full px-4 py-3 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] focus:bg-white outline-none transition-all font-light text-sm appearance-none">
                         <option value="">{c.motivoDefault}</option>
@@ -182,7 +182,7 @@ export default function Contact() {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[10px] font-bold uppercase tracking-widest text-[#7a7a6a]">{c.fieldMensaje}</label>
+                      <label className="text-[10px] font-bold uppercase tracking-widest text-[#6a6a5a]">{c.fieldMensaje}</label>
                       <textarea id="mensaje" value={formData.mensaje} onChange={handleChange} rows={4} placeholder={c.placeholderMensaje}
                         className="w-full px-4 py-3 bg-[#faf8f4] border border-[#d8d0c0] rounded-sm focus:border-[#2d4a2d] focus:bg-white outline-none transition-all font-light text-sm resize-none" />
                     </div>

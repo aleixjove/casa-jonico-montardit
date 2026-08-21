@@ -151,7 +151,7 @@ export default function Activities() {
                   </div>
                   <p className={cn(
                     "text-[11px] font-light leading-relaxed",
-                    itemDark[idx][iIdx] ? "text-[#c8d4c8]" : "text-[#7a7a6a]"
+                    itemDark[idx][iIdx] ? "text-[#c8d4c8]" : "text-[#6a6a5a]"
                   )}>
                     {item.detail}
                   </p>

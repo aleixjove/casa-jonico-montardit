@@ -161,7 +161,7 @@ export default function Traditions() {
                     "inline-flex items-center gap-1 mt-3 text-xs font-light tracking-wide transition-colors self-start",
                     tradition.dark
                       ? "text-[#a8b8a8] hover:text-[#d4a05a]"
-                      : "text-[#7a7a6a] hover:text-[#b07d3a]"
+                      : "text-[#6a6a5a] hover:text-[#b07d3a]"
                   )}
                 >
                   {tradition.linkText2}
@@ -177,7 +177,7 @@ export default function Traditions() {
                     "inline-flex items-center gap-1 mt-2 text-xs font-light tracking-wide transition-colors self-start",
                     tradition.dark
                       ? "text-[#a8b8a8] hover:text-[#d4a05a]"
-                      : "text-[#7a7a6a] hover:text-[#b07d3a]"
+                      : "text-[#6a6a5a] hover:text-[#b07d3a]"
                   )}
                 >
                   {tradition.linkText3}

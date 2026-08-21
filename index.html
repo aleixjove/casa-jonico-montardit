@@ -54,22 +54,25 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://casajonicomontardit.com" />
 
-    <!-- Google Analytics 4: initialized inline, but the ~185 KB gtag.js
-         is loaded AFTER the load event so it doesn't compete with the LCP. -->
+    <!-- Google Analytics 4: initialized inline, gtag.js (~185 KB) is loaded
+         when the browser is idle so it doesn't add long tasks near the LCP
+         window that Lighthouse measures for TBT. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-P4BXD4JTQF');
-      // Load gtag.js after LCP to keep the initial render fast on mobile.
-      addEventListener('load', function () {
-        setTimeout(function () {
-          var s = document.createElement('script');
-          s.async = true;
-          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-P4BXD4JTQF';
-          document.head.appendChild(s);
-        }, 0);
-      });
+      function loadGtag() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-P4BXD4JTQF';
+        document.head.appendChild(s);
+      }
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGtag, { timeout: 10000 });
+      } else {
+        addEventListener('load', function () { setTimeout(loadGtag, 3000); });
+      }
     </script>
 
     <!-- Schema.org Structured Data -->

@@ -91,7 +91,7 @@ export default function Gastronomia() {
                   >
                     {ROMAN[idx]}
                   </span>
-                  <span className="text-[10px] italic tracking-[0.15em] uppercase text-[#7a7a6a] leading-tight">
+                  <span className="text-[10px] italic tracking-[0.15em] uppercase text-[#6a6a5a] leading-tight">
                     {dish.tag}
                   </span>
                 </div>

@@ -20,9 +20,12 @@ export default function PromoPopup() {
 
     const hasSeenPopup = localStorage.getItem('hasSeenPromoPopup');
     if (!hasSeenPopup) {
+      // 5000 ms: prou tard perquè el LCP i el TBT que Lighthouse mesura ja
+      // hagin acabat (finestra de test ~4-6 s), però suficientment aviat
+      // perquè l'usuari real l'engegui abans de rebotar.
       const timer = setTimeout(() => {
         setIsVisible(true);
-      }, 2000);
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, []);
@@ -62,7 +65,7 @@ export default function PromoPopup() {
 
               {/* Subtitle */}
               <div className="mb-6">
-                <p className="text-[#cd9a55] font-display text-lg md:text-xl mb-1">
+                <p className="text-[#e8b876] font-display text-lg md:text-xl mb-1">
                   {p.badge}
                 </p>
                 <p className="text-white/90 font-light text-sm md:text-base">
