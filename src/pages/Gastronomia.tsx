@@ -28,7 +28,7 @@ export default function Gastronomia() {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#b07d3a] mb-4"
+            className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#8a5a2b] mb-4"
           >
             {g.badge}
           </motion.div>
@@ -107,11 +107,16 @@ export default function Gastronomia() {
                     )}
                   >
                     {DISH_IMAGES[idx] ? (
+                      // El primer plat (Girella, `featured`) sol ser l'element
+                      // LCP en mòbil, per això li marquem alta prioritat i no
+                      // el fem lazy. Els altres 6 sí queden lazy — s'han de
+                      // veure després de scrollar.
                       <img
                         src={DISH_IMAGES[idx]}
                         alt={dish.title}
                         className="w-full h-full object-cover"
-                        loading="lazy"
+                        loading={featured ? 'eager' : 'lazy'}
+                        fetchPriority={featured ? 'high' : 'low'}
                         referrerPolicy="no-referrer"
                       />
                     ) : (

@@ -4,10 +4,14 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { useLanguage } from '../i18n/LanguageContext';
 
+// Banderes locals (SVGs a public/flags/). Abans veníem de wikimedia.org +
+// flagcdn.com — el primer ens començava a retornar 429 (Too Many Requests) i
+// omplia la consola d'errors → penalitzava Best Practices a Lighthouse. Els
+// SVGs són tan petits (<300 bytes cada un) que ni compensa mirar CDN.
 const flags = {
-  ca: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Catalonia.svg/40px-Flag_of_Catalonia.svg.png',
-  es: 'https://flagcdn.com/w40/es.png',
-  en: 'https://flagcdn.com/w40/gb.png',
+  ca: '/flags/ca.svg',
+  es: '/flags/es.svg',
+  en: '/flags/en.svg',
 };
 
 const langNames = { ca: 'Català', es: 'Español', en: 'English' };
