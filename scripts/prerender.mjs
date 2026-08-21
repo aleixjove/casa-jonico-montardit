@@ -117,7 +117,16 @@ async function main() {
         await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 });
         await new Promise((r) => setTimeout(r, 400));
 
-        const html = await page.content();
+        let html = await page.content();
+
+        // Puppeteer executa el `onload` del <link rel="preload" ...> mentre
+        // renderitza, i el pattern `onload="this.rel='stylesheet'"` acaba
+        // deixant `rel="stylesheet"` al HTML capturat. Restaurem `rel="preload"`
+        // perquè el navegador real prioritzi el download de la font CSS.
+        html = html.replace(
+          /<link rel="stylesheet" as="style" href="https:\/\/fonts\.googleapis\.com/g,
+          '<link rel="preload" as="style" href="https://fonts.googleapis.com'
+        );
 
         const outPath =
           route === '/'

@@ -28,7 +28,7 @@ export default function CasaRuralPallars() {
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#b07d3a] mb-4 block"
+            className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#8a5a2b] mb-4 block"
           >
             {p.badge}
           </motion.span>

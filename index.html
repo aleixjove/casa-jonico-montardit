@@ -16,14 +16,14 @@
       fetchpriority="high"
     />
 
-    <!-- Google Fonts: non-blocking load (media="print" trick + swap to 'all' onload) -->
+    <!-- Google Fonts: preconnect + high-priority preload of the CSS, applied non-blockingly -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300..700&display=swap"
-      media="print"
-      onload="this.media='all'"
+      onload="this.rel='stylesheet'"
     />
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300..700&display=swap" />
@@ -54,13 +54,22 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://casajonicomontardit.com" />
 
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P4BXD4JTQF"></script>
+    <!-- Google Analytics 4: initialized inline, but the ~185 KB gtag.js
+         is loaded AFTER the load event so it doesn't compete with the LCP. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-P4BXD4JTQF');
+      // Load gtag.js after LCP to keep the initial render fast on mobile.
+      addEventListener('load', function () {
+        setTimeout(function () {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-P4BXD4JTQF';
+          document.head.appendChild(s);
+        }, 0);
+      });
     </script>
 
     <!-- Schema.org Structured Data -->

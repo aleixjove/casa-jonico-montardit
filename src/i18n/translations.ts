@@ -382,6 +382,7 @@ export const translations = {
       subtitle: 'Reservando en nuestra web directamente',
       cta: 'Reservar con descuento',
       footer: 'Sin intermediarios · Confirmación en menos de 24h',
+      close: 'Cerrar oferta',
     },
     notFound: {
       code: '404',
@@ -772,6 +773,7 @@ export const translations = {
       subtitle: 'Reservant a la nostra web directament',
       cta: 'Reservar amb descompte',
       footer: 'Sense intermediaris · Confirmació en menys de 24h',
+      close: 'Tancar oferta',
     },
     notFound: {
       code: '404',
@@ -1162,6 +1164,7 @@ export const translations = {
       subtitle: 'By booking on our website directly',
       cta: 'Book with discount',
       footer: 'No middlemen · Confirmation within 24h',
+      close: 'Close offer',
     },
     notFound: {
       code: '404',

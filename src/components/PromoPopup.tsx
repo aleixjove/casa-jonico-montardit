@@ -43,11 +43,12 @@ export default function PromoPopup() {
             className="relative w-full max-w-lg bg-[#2d4a2d] rounded-sm overflow-hidden shadow-2xl border border-white/10"
           >
             {/* Close Button */}
-            <button 
+            <button
               onClick={closePopup}
+              aria-label={p.close}
               className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-10"
             >
-              <X size={24} />
+              <X size={24} aria-hidden="true" />
             </button>
 
             <div className="p-8 md:p-12 text-center flex flex-col items-center">
@@ -61,7 +62,7 @@ export default function PromoPopup() {
 
               {/* Subtitle */}
               <div className="mb-6">
-                <p className="text-[#b07d3a] font-display text-lg md:text-xl mb-1">
+                <p className="text-[#cd9a55] font-display text-lg md:text-xl mb-1">
                   {p.badge}
                 </p>
                 <p className="text-white/90 font-light text-sm md:text-base">
